@@ -2,5 +2,10 @@ name = "locators"
 main = "src/index.ts"
 compatibility_date = "2026-04-11"
 
+[vars]
+NOTIFY_EMAIL = "j_rainey@outlook.com"
+# Optional: after verifying a domain in Resend, set a custom from:
+# RESEND_FROM = "Metro Locators <hello@yourdomain.com>"
+
 [assets]
 directory = "./public"

@@ -653,7 +653,7 @@
             <option>Buckhead</option>
             <option>Dunwoody</option>
             <option>Sandy Springs</option>
-            <option>Snellville/option>
+            <option>Snellville</option>
             <option>Decatur</option>
             <option>Other</option>
           </select>
@@ -786,7 +786,7 @@
   function renderListings(listings, container) {
     container.innerHTML = listings.map(l => `
       <div class="listing-card fade-in">
-        <img class="listing-img" src="${l.image}" alt="${l.name}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80'" />
+        <img class="listing-img" src="${l.image}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80'" />
         <div class="listing-body">
           <span class="listing-tag ${tagClass(l.tag)}">${l.tag}</span>
           <div class="listing-city">📍 ${l.city}</div>
@@ -844,9 +844,9 @@
         btn.disabled = false; btn.textContent = 'Get My Free Matches →';
       }
     } catch {
-      // Graceful fallback if server not running
-      document.getElementById('formSuccess').style.display = 'block';
-      btn.style.display = 'none';
+      alert('Could not send your request. Check your connection and try again.');
+      btn.disabled = false;
+      btn.textContent = 'Get My Free Matches →';
     }
   }
 
