@@ -399,7 +399,7 @@
   <a href="#listings" onclick="toggleMenu()">Apartments</a>
   <a href="#why" onclick="toggleMenu()">Why Us</a>
   <a href="#cities" onclick="toggleMenu()">Cities</a>
-  <a href="#contact" onclick="toggleMenu()">Find My Apartment</a>
+  <a href="https://agent.reliverealty.com/MetroLocators" onclick="toggleMenu()">Find My Apartment</a>
 </div>
 
 <!-- HERO -->
@@ -797,24 +797,16 @@
           <div class="listing-amenities">
             ${l.amenities.map(a => `<span class="amenity-pill">${a}</span>`).join('')}
           </div>
-          <a href="#contact" class="listing-cta">Get More Info</a>
+          <a href="https://agent.reliverealty.com/MetroLocators" class="listing-cta">Get More Info</a>
         </div>
       </div>
     `).join('');
     container.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   }
 
-  // Hero search
+  // Hero search → external locator
   function doSearch() {
-    const city = document.getElementById('s-city').value;
-    const beds = document.getElementById('s-beds').value;
-    const container = document.getElementById('listings-container');
-    document.getElementById('listings').scrollIntoView({ behavior: 'smooth' });
-
-    fetch(`/api/listings?city=${city}&beds=${beds}`)
-      .then(r => r.json())
-      .then(data => renderListings(data.listings, container))
-      .catch(() => renderListings(STATIC_LISTINGS, container));
+    window.location.href = 'https://agent.reliverealty.com/MetroLocators';
   }
 
   // Lead form
