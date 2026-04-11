@@ -8,7 +8,8 @@
     "dev": "nodemon server.js",
     "pages:dev": "npx wrangler pages dev public",
     "pages:deploy": "npx wrangler pages deploy public",
-    "deploy": "npx wrangler pages deploy public"
+    "cf:dev": "npx wrangler dev",
+    "deploy": "npx wrangler deploy"
   },
   "dependencies": {
     "express": "^4.18.2",
