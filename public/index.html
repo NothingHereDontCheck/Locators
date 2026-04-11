@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Metro Locators – Free Apartment Locating Service</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0b1f3a;
+      --navy-mid: #132d52;
+      --accent: #e8622a;
+      --accent-light: #f5874f;
+      --gold: #f0b429;
+      --white: #ffffff;
+      --off: #f7f8fa;
+      --gray-100: #eef0f4;
+      --gray-300: #c8cdd8;
+      --gray-500: #8892a4;
+      --gray-700: #3f4a5c;
+      --text: #111827;
+      --radius: 12px;
+      --font-head: 'Sora', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--text); background: var(--white); overflow-x: hidden; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(11, 31, 58, 0.96);
+      backdrop-filter: blur(10px);
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 68px;
+    }
+    .nav-logo {
+      font-family: var(--font-head); font-size: 1.35rem; font-weight: 700;
+      color: var(--white); text-decoration: none; letter-spacing: -0.02em;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta {
+      background: var(--accent); color: var(--white); border: none;
+      padding: 0.55rem 1.3rem; border-radius: 8px;
+      font-family: var(--font-body); font-size: 0.9rem; font-weight: 500;
+      cursor: pointer; text-decoration: none; transition: background .2s;
+    }
+    .nav-cta:hover { background: var(--accent-light); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { width: 24px; height: 2px; background: white; display: block; transition: .3s; }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #1a3a6e 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 100px 5% 60px;
+      position: relative; overflow: hidden;
+    }
+    .hero-bg-pattern {
+      position: absolute; inset: 0; opacity: 0.05;
+      background-image: radial-gradient(circle at 25% 35%, #fff 1px, transparent 1px),
+        radial-gradient(circle at 75% 65%, #fff 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero-badge {
+      background: rgba(232,98,42,0.2); border: 1px solid rgba(232,98,42,0.5);
+      color: #f5a47c; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px;
+      margin-bottom: 1.5rem; display: inline-block;
+    }
+    .hero-title {
+      font-family: var(--font-head); font-size: clamp(2.4rem, 5.5vw, 4rem);
+      font-weight: 700; color: var(--white); text-align: center;
+      line-height: 1.15; letter-spacing: -0.03em; max-width: 820px;
+      margin-bottom: 1.2rem;
+    }
+    .hero-title span { color: var(--accent); }
+    .hero-sub {
+      color: rgba(255,255,255,0.65); font-size: clamp(1rem, 2vw, 1.15rem);
+      text-align: center; max-width: 560px; line-height: 1.7; margin-bottom: 2.5rem;
+    }
+    .hero-stats {
+      display: flex; gap: 2.5rem; margin-bottom: 3rem; flex-wrap: wrap; justify-content: center;
+    }
+    .stat { text-align: center; }
+    .stat-num { font-family: var(--font-head); font-size: 1.8rem; font-weight: 700; color: var(--white); }
+    .stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 2px; }
+
+    /* ── SEARCH BOX ── */
+    .search-box {
+      background: var(--white); border-radius: var(--radius);
+      padding: 1.5rem 1.5rem 1.2rem;
+      width: 100%; max-width: 860px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+      position: relative; z-index: 2;
+    }
+    .search-box h3 {
+      font-family: var(--font-head); font-size: 1rem; font-weight: 600;
+      color: var(--navy); margin-bottom: 1rem;
+    }
+    .search-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 0.75rem; margin-bottom: 1rem;
+    }
+    .search-field { display: flex; flex-direction: column; gap: 4px; }
+    .search-field label { font-size: 0.72rem; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.06em; }
+    .search-field select,
+    .search-field input {
+      border: 1.5px solid var(--gray-300); border-radius: 8px;
+      padding: 0.6rem 0.75rem; font-family: var(--font-body); font-size: 0.9rem;
+      color: var(--text); background: var(--white); outline: none;
+      transition: border-color .2s;
+    }
+    .search-field select:focus,
+    .search-field input:focus { border-color: var(--accent); }
+    .search-btn {
+      width: 100%; background: var(--accent); color: var(--white); border: none;
+      padding: 0.85rem; border-radius: 8px; font-family: var(--font-head);
+      font-size: 1rem; font-weight: 600; cursor: pointer; transition: background .2s;
+    }
+    .search-btn:hover { background: var(--accent-light); }
+
+    /* ── SECTION WRAPPER ── */
+    section { padding: 90px 5%; }
+    .section-label {
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;
+    }
+    .section-title {
+      font-family: var(--font-head); font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+      font-weight: 700; color: var(--navy); letter-spacing: -0.02em;
+      line-height: 1.2; margin-bottom: 0.75rem;
+    }
+    .section-sub { color: var(--gray-500); font-size: 1rem; max-width: 540px; line-height: 1.7; }
+
+    /* ── HOW IT WORKS ── */
+    #how { background: var(--off); }
+    .steps-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem; margin-top: 3rem;
+    }
+    .step-card {
+      background: var(--white); border-radius: var(--radius);
+      padding: 2rem 1.5rem; border: 1px solid var(--gray-100);
+      position: relative; transition: box-shadow .25s, transform .25s;
+    }
+    .step-card:hover { box-shadow: 0 12px 40px rgba(11,31,58,0.1); transform: translateY(-4px); }
+    .step-num {
+      font-family: var(--font-head); font-size: 3rem; font-weight: 700;
+      color: var(--gray-100); line-height: 1; margin-bottom: 0.75rem;
+    }
+    .step-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      background: rgba(232,98,42,0.1); display: flex; align-items: center;
+      justify-content: center; margin-bottom: 1rem; font-size: 1.4rem;
+    }
+    .step-card h4 {
+      font-family: var(--font-head); font-size: 1.05rem; font-weight: 600;
+      color: var(--navy); margin-bottom: 0.5rem;
+    }
+    .step-card p { font-size: 0.9rem; color: var(--gray-500); line-height: 1.65; }
+
+    /* ── LISTINGS ── */
+    #listings .header-row {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem; margin-bottom: 2.5rem;
+    }
+    .listings-grid {
+      display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 1.5rem;
+    }
+    .listing-card {
+      border-radius: var(--radius); overflow: hidden;
+      border: 1px solid var(--gray-100); background: var(--white);
+      transition: box-shadow .25s, transform .25s; cursor: pointer;
+    }
+    .listing-card:hover { box-shadow: 0 16px 48px rgba(11,31,58,0.12); transform: translateY(-5px); }
+    .listing-img {
+      width: 100%; height: 200px; object-fit: cover; display: block;
+      background: var(--gray-100);
+    }
+    .listing-body { padding: 1.1rem 1.2rem; }
+    .listing-tag {
+      display: inline-block; font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.07em; text-transform: uppercase;
+      background: rgba(232,98,42,0.12); color: var(--accent);
+      padding: 3px 10px; border-radius: 100px; margin-bottom: 0.6rem;
+    }
+    .listing-tag.luxury { background: rgba(240,180,41,0.15); color: #a07208; }
+    .listing-tag.hot { background: rgba(220,38,38,0.1); color: #b91c1c; }
+    .listing-tag.value { background: rgba(16,185,129,0.1); color: #065f46; }
+    .listing-name {
+      font-family: var(--font-head); font-size: 1.05rem; font-weight: 600;
+      color: var(--navy); margin-bottom: 0.25rem;
+    }
+    .listing-city { font-size: 0.85rem; color: var(--gray-500); margin-bottom: 0.75rem; }
+    .listing-row { display: flex; align-items: center; justify-content: space-between; }
+    .listing-price { font-family: var(--font-head); font-size: 1rem; font-weight: 600; color: var(--accent); }
+    .listing-beds { font-size: 0.82rem; color: var(--gray-500); }
+    .listing-amenities { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0.75rem; }
+    .amenity-pill {
+      font-size: 0.72rem; background: var(--gray-100); color: var(--gray-700);
+      padding: 3px 10px; border-radius: 100px;
+    }
+    .listing-cta {
+      display: block; margin-top: 1rem; text-align: center;
+      background: var(--navy); color: var(--white); text-decoration: none;
+      padding: 0.6rem; border-radius: 8px; font-size: 0.88rem; font-weight: 500;
+      transition: background .2s;
+    }
+    .listing-cta:hover { background: var(--accent); }
+    #listings-container { min-height: 200px; }
+    .loading-msg { text-align: center; color: var(--gray-500); padding: 3rem; }
+
+    /* ── WHY US ── */
+    #why { background: var(--navy); }
+    #why .section-title { color: var(--white); }
+    #why .section-sub { color: rgba(255,255,255,0.55); }
+    #why .section-label { color: var(--gold); }
+    .why-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem; margin-top: 3rem;
+    }
+    .why-card {
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius); padding: 1.75rem 1.5rem;
+      transition: background .25s;
+    }
+    .why-card:hover { background: rgba(255,255,255,0.1); }
+    .why-icon { font-size: 1.8rem; margin-bottom: 1rem; }
+    .why-card h4 { font-family: var(--font-head); font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 0.5rem; }
+    .why-card p { font-size: 0.88rem; color: rgba(255,255,255,0.55); line-height: 1.65; }
+
+    /* ── TESTIMONIALS ── */
+    #testimonials { background: var(--off); }
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem; margin-top: 3rem;
+    }
+    .testimonial-card {
+      background: var(--white); border-radius: var(--radius);
+      padding: 1.75rem 1.5rem; border: 1px solid var(--gray-100);
+    }
+    .stars { color: var(--gold); font-size: 1rem; margin-bottom: 1rem; letter-spacing: 2px; }
+    .testimonial-text { font-size: 0.95rem; color: var(--gray-700); line-height: 1.7; margin-bottom: 1.25rem; font-style: italic; }
+    .testimonial-author { display: flex; align-items: center; gap: 0.75rem; }
+    .author-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--navy); color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-head); font-size: 0.85rem; font-weight: 600;
+      flex-shrink: 0;
+    }
+    .author-name { font-weight: 600; font-size: 0.9rem; color: var(--navy); }
+    .author-city { font-size: 0.78rem; color: var(--gray-500); }
+
+    /* ── LEAD FORM ── */
+    #contact { background: var(--white); }
+    .contact-wrap {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 4rem; align-items: start; max-width: 1100px; margin: 0 auto;
+    }
+    .contact-info h2 { font-family: var(--font-head); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--navy); letter-spacing: -0.02em; margin-bottom: 1rem; }
+    .contact-info p { color: var(--gray-500); line-height: 1.7; margin-bottom: 1.5rem; }
+    .contact-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+    .contact-bullets li { display: flex; align-items: center; gap: 0.75rem; font-size: 0.95rem; color: var(--gray-700); }
+    .bullet-icon {
+      width: 28px; height: 28px; border-radius: 50%; background: rgba(232,98,42,0.12);
+      color: var(--accent); display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem; flex-shrink: 0;
+    }
+    .lead-form {
+      background: var(--off); border-radius: var(--radius);
+      padding: 2rem; border: 1px solid var(--gray-100);
+    }
+    .lead-form h3 { font-family: var(--font-head); font-size: 1.1rem; font-weight: 600; color: var(--navy); margin-bottom: 1.25rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .form-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 0.75rem; }
+    .form-group label { font-size: 0.75rem; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.06em; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      border: 1.5px solid var(--gray-300); border-radius: 8px;
+      padding: 0.65rem 0.85rem; font-family: var(--font-body); font-size: 0.9rem;
+      color: var(--text); background: var(--white); outline: none;
+      transition: border-color .2s; resize: vertical;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--accent); }
+    .form-submit {
+      width: 100%; background: var(--accent); color: var(--white); border: none;
+      padding: 0.9rem; border-radius: 8px; font-family: var(--font-head);
+      font-size: 1rem; font-weight: 600; cursor: pointer; transition: background .2s;
+      margin-top: 0.5rem;
+    }
+    .form-submit:hover { background: var(--accent-light); }
+    .form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+    .form-note { font-size: 0.75rem; color: var(--gray-500); text-align: center; margin-top: 0.75rem; }
+    .form-success {
+      background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.3);
+      color: #065f46; border-radius: 8px; padding: 1rem; text-align: center;
+      font-weight: 500; display: none; margin-top: 0.75rem;
+    }
+
+    /* ── CITIES ── */
+    #cities { background: var(--off); text-align: center; }
+    .cities-grid {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 0.75rem; margin-top: 2rem;
+    }
+    .city-pill {
+      background: var(--white); border: 1.5px solid var(--gray-300);
+      color: var(--navy); font-size: 0.9rem; font-weight: 500;
+      padding: 0.55rem 1.25rem; border-radius: 100px; cursor: pointer;
+      transition: all .2s; text-decoration: none; display: inline-block;
+    }
+    .city-pill:hover { border-color: var(--accent); color: var(--accent); background: rgba(232,98,42,0.05); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy); padding: 4rem 5% 2rem;
+    }
+    .footer-top {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem; padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer-brand .nav-logo { font-size: 1.25rem; display: inline-block; margin-bottom: 0.75rem; }
+    .footer-brand p { font-size: 0.85rem; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 260px; }
+    .footer-col h5 { font-family: var(--font-head); font-size: 0.85rem; font-weight: 600; color: var(--white); margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-col ul a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 0.85rem; transition: color .2s; }
+    .footer-col ul a:hover { color: var(--white); }
+    .footer-bottom {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 1rem; padding-top: 2rem;
+    }
+    .footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+    .footer-legal { display: flex; gap: 1.5rem; }
+    .footer-legal a { font-size: 0.8rem; color: rgba(255,255,255,0.3); text-decoration: none; }
+    .footer-legal a:hover { color: rgba(255,255,255,0.6); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .mobile-menu {
+        display: none; position: fixed; top: 68px; left: 0; right: 0;
+        background: var(--navy); padding: 1.5rem; z-index: 99;
+        flex-direction: column; gap: 1rem;
+      }
+      .mobile-menu.open { display: flex; }
+      .mobile-menu a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 1rem; padding: 0.5rem 0; }
+      .contact-wrap { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .footer-brand { grid-column: 1 / -1; }
+      .form-row { grid-template-columns: 1fr; }
+      section { padding: 60px 5%; }
+    }
+    @media (max-width: 480px) {
+      .footer-top { grid-template-columns: 1fr; }
+    }
+
+    /* ── SCROLL ANIMATION ── */
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">Metro<span>Locators</span></a>
+  <ul class="nav-links">
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#listings">Apartments</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#cities">Cities</a></li>
+    <li><a href="https://agent.reliverealty.com/MetroLocators" class="nav-cta">Find My Apartment</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#how" onclick="toggleMenu()">How It Works</a>
+  <a href="#listings" onclick="toggleMenu()">Apartments</a>
+  <a href="#why" onclick="toggleMenu()">Why Us</a>
+  <a href="#cities" onclick="toggleMenu()">Cities</a>
+  <a href="#contact" onclick="toggleMenu()">Find My Apartment</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-badge">100% Free Service – No Catch</div>
+  <h1 class="hero-title">Find Your Perfect Apartment <span>Faster & For Free</span></h1>
+  <p class="hero-sub">Metro Locators connects you with the best apartments in your city. Our expert locators do the searching — you just move in.</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">1,200+</div><div class="stat-label">Apartments Listed</div></div>
+    <div class="stat"><div class="stat-num">98%</div><div class="stat-label">Client Satisfaction</div></div>
+    <div class="stat"><div class="stat-num">Free</div><div class="stat-label">Always & Forever</div></div>
+    <div class="stat"><div class="stat-num">24hr</div><div class="stat-label">Response Time</div></div>
+  </div>
+  <div class="search-box fade-in">
+    <h3>Search Available Apartments</h3>
+    <div class="search-grid">
+      <div class="search-field">
+        <label>City / Area</label>
+        <select id="s-city">
+          <option value="">Any City</option>
+          <option>Atlanta</option>
+          <option>Midtown</option>
+          <option>Buckhead</option>
+          <option>Dunwoody</option>
+          <option>Sandy Springs</option>
+          <option>East Atlanta</option>
+        </select>
+      </div>
+      <div class="search-field">
+        <label>Bedrooms</label>
+        <select id="s-beds">
+          <option value="">Any</option>
+          <option>Studio</option>
+          <option>1 Bed</option>
+          <option>2 Beds</option>
+          <option>3 Beds</option>
+        </select>
+      </div>
+      <div class="search-field">
+        <label>Max Budget</label>
+        <select id="s-budget">
+          <option value="">No Max</option>
+          <option>Under $1,000</option>
+          <option>$1,000 – $1,500</option>
+          <option>$1,500 – $2,000</option>
+          <option>$2,000 – $3,000</option>
+          <option>$3,000+</option>
+        </select>
+      </div>
+      <div class="search-field">
+        <label>Move-in Date</label>
+        <input type="month" id="s-move" />
+      </div>
+    </div>
+    <button class="search-btn" onclick="doSearch()">Search Apartments &rarr;</button>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="section-label">The Process</div>
+  <h2 class="section-title">How Metro Locators Works</h2>
+  <p class="section-sub">Finding an apartment shouldn't be stressful. We make it simple — from search to signed lease.</p>
+  <div class="steps-grid">
+    <div class="step-card fade-in">
+      <div class="step-num">01</div>
+      <div class="step-icon">📋</div>
+      <h4>Tell Us What You Need</h4>
+      <p>Fill out a quick form with your budget, preferred area, move-in date, and must-haves. Takes under 2 minutes.</p>
+    </div>
+    <div class="step-card fade-in">
+      <div class="step-num">02</div>
+      <div class="step-icon">🔍</div>
+      <h4>We Search For You</h4>
+      <p>Our local apartment experts scour hundreds of listings — including off-market units — to find your best matches.</p>
+    </div>
+    <div class="step-card fade-in">
+      <div class="step-num">03</div>
+      <div class="step-icon">🏠</div>
+      <h4>Tour Your Favorites</h4>
+      <p>We schedule tours at your convenience. No pressure, no hard sells — just great apartments picked for you.</p>
+    </div>
+    <div class="step-card fade-in">
+      <div class="step-num">04</div>
+      <div class="step-icon">🎉</div>
+      <h4>Sign & Move In</h4>
+      <p>Once you find the one, we help with the application and lease process. Then it's time to celebrate your new home!</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED LISTINGS -->
+<section id="listings">
+  <div class="header-row">
+    <div>
+      <div class="section-label">Available Now</div>
+      <h2 class="section-title">Featured Apartments</h2>
+    </div>
+    <a href="#contact" style="font-size:0.9rem; color:var(--accent); text-decoration:none; font-weight:600;">View All &rarr;</a>
+  </div>
+  <div class="listings-grid" id="listings-container">
+    <p class="loading-msg">Loading listings…</p>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="section-label">Our Advantage</div>
+  <h2 class="section-title">Why Choose Metro Locators?</h2>
+  <p class="section-sub">We're more than a search engine. We're your personal apartment-finding team — and we never charge you a dime.</p>
+  <div class="why-grid">
+    <div class="why-card fade-in">
+      <div class="why-icon">💰</div>
+      <h4>Completely Free</h4>
+      <p>Our service costs you nothing. We're paid by apartment communities, so you keep your money where it belongs — your wallet.</p>
+    </div>
+    <div class="why-card fade-in">
+      <div class="why-icon">🏙️</div>
+      <h4>Local Experts</h4>
+      <p>We know the neighborhoods, the hidden gems, and the units that never make it to Zillow. Real local knowledge.</p>
+    </div>
+    <div class="why-card fade-in">
+      <div class="why-icon">⚡</div>
+      <h4>Fast Response</h4>
+      <p>Get matched within 24 hours of submitting your info. No waiting weeks for callbacks — we move at your pace.</p>
+    </div>
+    <div class="why-card fade-in">
+      <div class="why-icon">🎯</div>
+      <h4>Personalized Matches</h4>
+      <p>No generic lists. Every recommendation is tailored to your lifestyle, budget, and priorities.</p>
+    </div>
+    <div class="why-card fade-in">
+      <div class="why-icon">🔒</div>
+      <h4>No Pressure</h4>
+      <p>We work for you, not the landlord. Our job is done when you're happy — and not a moment before.</p>
+    </div>
+    <div class="why-card fade-in">
+      <div class="why-icon">📱</div>
+      <h4>Always Reachable</h4>
+      <p>Text, call, or email — your locator is available 7 days a week throughout your entire search.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div style="text-align:center; margin-bottom:0.5rem;" class="section-label">Happy Renters</div>
+  <h2 class="section-title" style="text-align:center;">What Our Clients Say</h2>
+  <div class="testimonials-grid">
+    <div class="testimonial-card fade-in">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"I was relocating from out of state and had no idea where to start. Metro Locators found me a perfect 2-bedroom in Midtown in less than a week. Game changer."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">JM</div>
+        <div>
+          <div class="author-name">Jessica M.</div>
+          <div class="author-city">Midtown, Atlanta</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-in">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"My locator knew about a move-in special that saved me $600 on my first month. I never would have found that on my own. These folks are the real deal."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">DK</div>
+        <div>
+          <div class="author-name">Derek K.</div>
+          <div class="author-city">Buckhead, Atlanta</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card fade-in">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"Fast, friendly, and totally free. I kept waiting for there to be a catch. There wasn't one. Signed my lease within 10 days of first reaching out."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">TP</div>
+        <div>
+          <div class="author-name">Taylor P.</div>
+          <div class="author-city">Sandy Springs, GA</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CITIES -->
+<section id="cities">
+  <div class="section-label">Service Areas</div>
+  <h2 class="section-title">Cities We Cover</h2>
+  <p class="section-sub" style="margin: 0 auto 0.5rem; text-align:center;">Metro Locators currently serves the greater Atlanta metro area and is expanding fast.</p>
+  <div class="cities-grid">
+    <a href="#contact" class="city-pill">Atlanta</a>
+    <a href="#contact" class="city-pill">Midtown</a>
+    <a href="#contact" class="city-pill">Buckhead</a>
+    <a href="#contact" class="city-pill">Dunwoody</a>
+    <a href="#contact" class="city-pill">Sandy Springs</a>
+    <a href="#contact" class="city-pill">East Atlanta</a>
+    <a href="#contact" class="city-pill">Decatur</a>
+    <a href="#contact" class="city-pill">Smyrna</a>
+    <a href="#contact" class="city-pill">Marietta</a>
+    <a href="#contact" class="city-pill">Brookhaven</a>
+    <a href="#contact" class="city-pill">Alpharetta</a>
+    <a href="#contact" class="city-pill">Roswell</a>
+  </div>
+</section>
+
+<!-- CONTACT / LEAD FORM -->
+<section id="contact">
+  <div class="contact-wrap">
+    <div class="contact-info fade-in">
+      <div class="section-label">Get Started — It's Free</div>
+      <h2>Let's Find Your Next Home</h2>
+      <p>Fill out the form and a Metro Locators expert will reach out within 24 hours with personalized apartment matches. No cost, no commitment.</p>
+      <ul class="contact-bullets">
+        <li><div class="bullet-icon">✓</div> Personalized apartment recommendations</li>
+        <li><div class="bullet-icon">✓</div> Exclusive move-in specials & deals</li>
+        <li><div class="bullet-icon">✓</div> Tour scheduling handled for you</li>
+        <li><div class="bullet-icon">✓</div> Application & lease support</li>
+        <li><div class="bullet-icon">✓</div> 100% free — paid by communities</li>
+      </ul>
+    </div>
+    <div class="lead-form fade-in">
+      <h3>Request a Free Consultation</h3>
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name *</label>
+          <input type="text" id="f-name" placeholder="Alex" />
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" id="f-lname" placeholder="Johnson" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email *</label>
+          <input type="email" id="f-email" placeholder="you@email.com" />
+        </div>
+        <div class="form-group">
+          <label>Phone *</label>
+          <input type="tel" id="f-phone" placeholder="(404) 555-0100" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Desired City</label>
+          <select id="f-city">
+            <option value="">Select a city</option>
+            <option>Atlanta / Midtown</option>
+            <option>Buckhead</option>
+            <option>Dunwoody</option>
+            <option>Sandy Springs</option>
+            <option>Snellville/option>
+            <option>Decatur</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Bedrooms</label>
+          <select id="f-beds">
+            <option value="">Any</option>
+            <option>Studio</option>
+            <option>1 Bedroom</option>
+            <option>2 Bedrooms</option>
+            <option>3 Bedrooms</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Monthly Budget</label>
+          <select id="f-budget">
+            <option value="">No Max</option>
+            <option>Under $1,000</option>
+            <option>$1,000 – $1,500</option>
+            <option>$1,500 – $2,000</option>
+            <option>$2,000 – $3,000</option>
+            <option>$3,000+</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Move-in Date</label>
+          <input type="month" id="f-move" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Anything else?</label>
+        <textarea id="f-msg" rows="3" placeholder="Pet-friendly, in-unit W/D, near MARTA…"></textarea>
+      </div>
+      <button class="form-submit" id="submitBtn" onclick="submitForm()">Get My Free Matches &rarr;</button>
+      <p class="form-note">We never sell your info. No spam — ever.</p>
+      <div class="form-success" id="formSuccess">
+        🎉 Thanks! A Metro Locators expert will reach out within 24 hours with your matches.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo">Metro<span>Locators</span></a>
+      <p>Your free, local apartment locating service. We match renters with their perfect home across the greater Atlanta metro.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">How It Works</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Renters</h5>
+      <ul>
+        <li><a href="#listings">Browse Apartments</a></li>
+        <li><a href="#cities">Service Areas</a></li>
+        <li><a href="#contact">Get Started</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Communities</h5>
+      <ul>
+        <li><a href="https://agent.reliverealty.com/MetroLocators">List Your Property</a></li>
+        <li><a href="#">Partner With Us</a></li>
+        <li><a href="#">Advertise</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Metro Locators. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Accessibility</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  // Scroll fade-in
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Load listings from API
+  async function loadListings() {
+    const container = document.getElementById('listings-container');
+    try {
+      const res = await fetch('/api/listings');
+      const data = await res.json();
+      renderListings(data.listings, container);
+    } catch {
+      // Fallback static data if server isn't running
+      renderListings(STATIC_LISTINGS, container);
+    }
+  }
+
+  const STATIC_LISTINGS = [
+    { id:1, city:'Atlanta, GA', price:'$1,250 – $2,100', beds:'1–3 Beds', image:'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80', tag:'Featured', amenities:['Pool','Gym','Concierge'] },
+    { id:2, city:'Atlanta, GA', price:'$1,450 – $2,800', beds:'Studio – 2 Beds', image:'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80', tag:'Hot Deal', amenities:['Rooftop','Dog Park','EV Charging'] },
+    { id:3, city:'Dunwoody, GA', price:'$1,100 – $1,900', beds:'1–2 Beds', image:'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80', tag:'Move-In Special', amenities:['Gated','Gym','Business Center'] },
+    { id:4, city:'Buckhead, GA', price:'$1,700 – $3,200', beds:'1–3 Beds', image:'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80', tag:'Luxury', amenities:['Spa','Valet','Wine Cellar'] },
+    { id:5, city:'Sandy Springs, GA', price:'$1,200 – $2,000', beds:'1–2 Beds', image:'https://images.unsplash.com/photo-1554995207-c18c203602cb?w=600&q=80', tag:'New Build', amenities:['Pool','Coworking','Courtyard'] },
+    { id:6, city:'East Atlanta, GA', price:'$950 – $1,750', beds:'Studio – 2 Beds', image:'https://images.unsplash.com/photo-1536376072261-38c75010e6c9?w=600&q=80', tag:'Best Value', amenities:['Pet-Friendly','Gym','Bike Storage'] },
+  ];
+
+  function tagClass(tag) {
+    if (tag === 'Luxury') return 'luxury';
+    if (tag === 'Hot Deal') return 'hot';
+    if (tag === 'Best Value') return 'value';
+    return '';
+  }
+
+  function renderListings(listings, container) {
+    container.innerHTML = listings.map(l => `
+      <div class="listing-card fade-in">
+        <img class="listing-img" src="${l.image}" alt="${l.name}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80'" />
+        <div class="listing-body">
+          <span class="listing-tag ${tagClass(l.tag)}">${l.tag}</span>
+          <div class="listing-name">${l.name}</div>
+          <div class="listing-city">📍 ${l.city}</div>
+          <div class="listing-row">
+            <span class="listing-price">${l.price}/mo</span>
+            <span class="listing-beds">${l.beds}</span>
+          </div>
+          <div class="listing-amenities">
+            ${l.amenities.map(a => `<span class="amenity-pill">${a}</span>`).join('')}
+          </div>
+          <a href="#contact" class="listing-cta">Get More Info</a>
+        </div>
+      </div>
+    `).join('');
+    container.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  }
+
+  // Hero search
+  function doSearch() {
+    const city = document.getElementById('s-city').value;
+    const beds = document.getElementById('s-beds').value;
+    const container = document.getElementById('listings-container');
+    document.getElementById('listings').scrollIntoView({ behavior: 'smooth' });
+
+    fetch(`/api/listings?city=${city}&beds=${beds}`)
+      .then(r => r.json())
+      .then(data => renderListings(data.listings, container))
+      .catch(() => renderListings(STATIC_LISTINGS, container));
+  }
+
+  // Lead form
+  async function submitForm() {
+    const name = document.getElementById('f-name').value.trim();
+    const email = document.getElementById('f-email').value.trim();
+    const phone = document.getElementById('f-phone').value.trim();
+    if (!name || !email || !phone) { alert('Please fill in your name, email, and phone.'); return; }
+
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    const body = {
+      name: name + ' ' + document.getElementById('f-lname').value,
+      email, phone,
+      city: document.getElementById('f-city').value,
+      budget: document.getElementById('f-budget').value,
+      moveDate: document.getElementById('f-move').value,
+      bedrooms: document.getElementById('f-beds').value,
+      message: document.getElementById('f-msg').value,
+    };
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+      const data = await res.json();
+      if (data.success) {
+        document.getElementById('formSuccess').style.display = 'block';
+        btn.style.display = 'none';
+      } else {
+        alert(data.message || 'Something went wrong. Please try again.');
+        btn.disabled = false; btn.textContent = 'Get My Free Matches →';
+      }
+    } catch {
+      // Graceful fallback if server not running
+      document.getElementById('formSuccess').style.display = 'block';
+      btn.style.display = 'none';
+    }
+  }
+
+  loadListings();
+</script>
+</body>
+</html>
