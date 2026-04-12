@@ -305,10 +305,9 @@
     .city-pill {
       background: var(--white); border: 1.5px solid var(--gray-300);
       color: var(--navy); font-size: 0.9rem; font-weight: 500;
-      padding: 0.55rem 1.25rem; border-radius: 100px; cursor: pointer;
-      transition: all .2s; text-decoration: none; display: inline-block;
+      padding: 0.55rem 1.25rem; border-radius: 100px; cursor: default;
+      display: inline-block; user-select: none;
     }
-    .city-pill:hover { border-color: var(--accent); color: var(--accent); background: rgba(232,98,42,0.05); }
 
     /* ── FOOTER ── */
     footer {
@@ -541,19 +540,19 @@
   <div class="section-label">Service Areas</div>
   <h2 class="section-title">Cities We Cover</h2>
   <p class="section-sub" style="margin: 0 auto 0.5rem; text-align:center;">Metro Locators currently serves the greater Atlanta metro area and is expanding fast.</p>
-  <div class="cities-grid">
-    <a href="#contact" class="city-pill">Atlanta</a>
-    <a href="#contact" class="city-pill">Midtown</a>
-    <a href="#contact" class="city-pill">Buckhead</a>
-    <a href="#contact" class="city-pill">Dunwoody</a>
-    <a href="#contact" class="city-pill">Sandy Springs</a>
-    <a href="#contact" class="city-pill">East Atlanta</a>
-    <a href="#contact" class="city-pill">Decatur</a>
-    <a href="#contact" class="city-pill">Smyrna</a>
-    <a href="#contact" class="city-pill">Marietta</a>
-    <a href="#contact" class="city-pill">Brookhaven</a>
-    <a href="#contact" class="city-pill">Alpharetta</a>
-    <a href="#contact" class="city-pill">Roswell</a>
+  <div class="cities-grid" role="list" aria-label="Cities we cover">
+    <span class="city-pill" role="listitem">Atlanta</span>
+    <span class="city-pill" role="listitem">Midtown</span>
+    <span class="city-pill" role="listitem">Buckhead</span>
+    <span class="city-pill" role="listitem">Dunwoody</span>
+    <span class="city-pill" role="listitem">Sandy Springs</span>
+    <span class="city-pill" role="listitem">East Atlanta</span>
+    <span class="city-pill" role="listitem">Decatur</span>
+    <span class="city-pill" role="listitem">Smyrna</span>
+    <span class="city-pill" role="listitem">Marietta</span>
+    <span class="city-pill" role="listitem">Brookhaven</span>
+    <span class="city-pill" role="listitem">Alpharetta</span>
+    <span class="city-pill" role="listitem">Roswell</span>
   </div>
 </section>
 
