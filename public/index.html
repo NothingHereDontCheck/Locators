@@ -342,6 +342,18 @@
     .footer-legal a { font-size: 0.8rem; color: rgba(255,255,255,0.3); text-decoration: none; }
     .footer-legal a:hover { color: rgba(255,255,255,0.6); }
 
+    /* ── NEWSLETTER (HubSpot) ── */
+    .newsletter-section {
+      background: var(--navy);
+      padding: 3rem 5% 4rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .newsletter-section .newsletter-inner {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .newsletter-section .hs-form-frame { min-height: 120px; }
+
     /* ── MOBILE ── */
     @media (max-width: 768px) {
       .nav-links { display: none; }
@@ -627,6 +639,13 @@
     </div>
   </div>
 </footer>
+
+<section class="newsletter-section fade-in" id="newsletter" aria-label="Newsletter signup">
+  <div class="newsletter-inner">
+    <script src="https://js-na2.hsforms.net/forms/embed/245897195.js" defer></script>
+    <div class="hs-form-frame" data-region="na2" data-form-id="85f97766-a221-4e66-a6a1-65ba299d3bc1" data-portal-id="245897195"></div>
+  </div>
+</section>
 
 <script>
   // Mobile menu
