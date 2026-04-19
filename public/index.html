@@ -352,6 +352,21 @@
       max-width: 640px;
       margin: 0 auto;
     }
+    .newsletter-section h2 {
+      font-family: var(--font-head);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    .newsletter-section .newsletter-lead {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      margin-bottom: 1.75rem;
+      line-height: 1.6;
+    }
     .newsletter-section .hs-form-frame { min-height: 120px; }
 
     /* ── MOBILE ── */
@@ -556,6 +571,7 @@
   </div>
 </section>
 
+
 <!-- CITIES -->
 <section id="cities">
   <div class="section-label">Service Areas</div>
@@ -640,8 +656,10 @@
   </div>
 </footer>
 
-<section class="newsletter-section fade-in" id="newsletter" aria-label="Newsletter signup">
+<section class="newsletter-section fade-in" id="newsletter" aria-labelledby="newsletter-heading">
   <div class="newsletter-inner">
+    <h2 id="newsletter-heading">Newsletter</h2>
+    <p class="newsletter-lead">Get updates on new listings and metro rental tips.</p>
     <script src="https://js-na2.hsforms.net/forms/embed/245897195.js" defer></script>
     <div class="hs-form-frame" data-region="na2" data-form-id="85f97766-a221-4e66-a6a1-65ba299d3bc1" data-portal-id="245897195"></div>
   </div>
@@ -701,5 +719,7 @@
 
   initFeaturedPendulum();
 </script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5290541301761290"
+     crossorigin="anonymous"></script>
 </body>
 </html>
