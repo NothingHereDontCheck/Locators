@@ -260,53 +260,6 @@ crossorigin="anonymous"></script>
     .author-name { font-weight: 600; font-size: 0.9rem; color: var(--navy); }
     .author-city { font-size: 0.78rem; color: var(--gray-500); }
 
-    /* ── LEAD FORM ── */
-    #contact { background: var(--white); }
-    .contact-wrap {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 4rem; align-items: start; max-width: 1100px; margin: 0 auto;
-    }
-    .contact-info h2 { font-family: var(--font-head); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: var(--navy); letter-spacing: -0.02em; margin-bottom: 1rem; }
-    .contact-info p { color: var(--gray-500); line-height: 1.7; margin-bottom: 1.5rem; }
-    .contact-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
-    .contact-bullets li { display: flex; align-items: center; gap: 0.75rem; font-size: 0.95rem; color: var(--gray-700); }
-    .bullet-icon {
-      width: 28px; height: 28px; border-radius: 50%; background: rgba(232,98,42,0.12);
-      color: var(--accent); display: flex; align-items: center; justify-content: center;
-      font-size: 0.85rem; flex-shrink: 0;
-    }
-    .lead-form {
-      background: var(--off); border-radius: var(--radius);
-      padding: 2rem; border: 1px solid var(--gray-100);
-    }
-    .lead-form h3 { font-family: var(--font-head); font-size: 1.1rem; font-weight: 600; color: var(--navy); margin-bottom: 1.25rem; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-    .form-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 0.75rem; }
-    .form-group label { font-size: 0.75rem; font-weight: 600; color: var(--gray-500); text-transform: uppercase; letter-spacing: 0.06em; }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      border: 1.5px solid var(--gray-300); border-radius: 8px;
-      padding: 0.65rem 0.85rem; font-family: var(--font-body); font-size: 0.9rem;
-      color: var(--text); background: var(--white); outline: none;
-      transition: border-color .2s; resize: vertical;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus { border-color: var(--accent); }
-    .form-submit {
-      width: 100%; background: var(--accent); color: var(--white); border: none;
-      padding: 0.9rem; border-radius: 8px; font-family: var(--font-head);
-      font-size: 1rem; font-weight: 600; cursor: pointer; transition: background .2s;
-      margin-top: 0.5rem; text-decoration: none; display: block; text-align: center;
-      box-sizing: border-box;
-    }
-    .form-submit:hover { background: var(--accent-light); color: var(--white); }
-    .lead-form-cta-only {
-      display: flex; align-items: center; justify-content: center;
-      min-height: 100px; padding: 2rem;
-    }
-    .lead-form-cta-only .form-submit { margin-top: 0; max-width: 400px; }
 
     /* ── CITIES ── */
     #cities { background: var(--off); text-align: center; }
