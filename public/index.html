@@ -43,6 +43,27 @@ crossorigin="anonymous"></script>
     html { scroll-behavior: smooth; }
     body { font-family: var(--font-body); color: var(--text); background: var(--white); overflow-x: hidden; }
 
+    /* ── STATES BAR ── */
+    .states-bar {
+      background: var(--navy); padding: 0.6rem 5%;
+      display: flex; align-items: center; justify-content: center; gap: 2rem;
+      flex-wrap: wrap; border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .states-label {
+      color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.08em;
+    }
+    .states-list {
+      display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; justify-content: center;
+    }
+    .states-list li {
+      color: var(--white); font-size: 0.85rem; font-weight: 500;
+      display: flex; align-items: center; gap: 0.4rem;
+    }
+    .states-list li::before {
+      content: '●'; color: var(--accent); font-size: 0.5rem;
+    }
+
     /* ── NAV ── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -352,6 +373,17 @@ crossorigin="anonymous"></script>
   </style>
 </head>
 <body>
+
+<!-- STATES BAR -->
+<div class="states-bar">
+  <span class="states-label">Operating States</span>
+  <ul class="states-list">
+    <li>Georgia</li>
+    <li>Texas</li>
+    <li>Illinois</li>
+    <li>Colorado</li>
+  </ul>
+</div>
 
 <!-- NAV -->
 <nav id="navbar">
