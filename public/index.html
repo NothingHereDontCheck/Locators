@@ -38,6 +38,7 @@ crossorigin="anonymous"></script>
       --radius: 12px;
       --font-head: 'Sora', sans-serif;
       --font-body: 'DM Sans', sans-serif;
+      --states-bar-height: 40px;
     }
 
     html { scroll-behavior: smooth; }
@@ -45,7 +46,9 @@ crossorigin="anonymous"></script>
 
     /* ── STATES BAR ── */
     .states-bar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 101;
       background: var(--navy); padding: 0.6rem 5%;
+      height: var(--states-bar-height);
       display: flex; align-items: center; justify-content: center; gap: 2rem;
       flex-wrap: wrap; border-bottom: 1px solid rgba(255,255,255,0.1);
     }
@@ -66,7 +69,7 @@ crossorigin="anonymous"></script>
 
     /* ── NAV ── */
     nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      position: fixed; top: var(--states-bar-height); left: 0; right: 0; z-index: 100;
       background: rgba(11, 31, 58, 0.96);
       backdrop-filter: blur(10px);
       padding: 0 5%;
@@ -96,7 +99,7 @@ crossorigin="anonymous"></script>
       min-height: 100vh;
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #1a3a6e 100%);
       display: flex; flex-direction: column; align-items: center; justify-content: center;
-      padding: 100px 5% 60px;
+      padding: calc(var(--states-bar-height) + 68px + 32px) 5% 60px;
       position: relative; overflow: hidden;
     }
     .hero-bg-pattern {
@@ -376,7 +379,7 @@ crossorigin="anonymous"></script>
 
 <!-- STATES BAR -->
 <div class="states-bar">
-  <span class="states-label">Operating States</span>
+  <span class="states-label">AvailableStates</span>
   <ul class="states-list">
     <li>Georgia</li>
     <li>Texas</li>
