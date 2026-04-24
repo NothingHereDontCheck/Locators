@@ -351,6 +351,9 @@ crossorigin="anonymous"></script>
 
     /* ── MOBILE ── */
     @media (max-width: 768px) {
+      .states-bar { display: none; }
+      nav { top: 0; }
+      #hero { padding-top: calc(68px + 32px); }
       .nav-links { display: none; }
       .hamburger { display: flex; }
       .mobile-menu {
@@ -379,7 +382,7 @@ crossorigin="anonymous"></script>
 
 <!-- STATES BAR -->
 <div class="states-bar">
-  <span class="states-label">AvailableStates</span>
+  <span class="states-label">Available States</span>
   <ul class="states-list">
     <li>Georgia</li>
     <li>Texas</li>
