@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9DXBMSZXR6"></script>
+  <meta name="google-adsense-account" content="ca-pub-5290541301761290">
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9DXBMSZXR6');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms and Conditions – Metro Locators</title>
+  <meta name="description" content="Terms and Conditions for Metro Locators LLC. Read the terms governing your use of metrolocators.com." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0b1f3a; --accent: #e8622a; --accent-light: #f5874f;
+      --white: #ffffff; --off: #f7f8fa; --gray-100: #eef0f4;
+      --gray-300: #c8cdd8; --gray-500: #8892a4;
+      --radius: 12px; --font-head: 'Sora', sans-serif; --font-body: 'DM Sans', sans-serif;
+      --states-bar-height: 40px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); background: var(--white); overflow-x: hidden; }
+
+    .states-bar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 101;
+      background: var(--navy); padding: 0.6rem 5%; height: var(--states-bar-height);
+      display: flex; align-items: center; justify-content: center; gap: 2rem;
+      flex-wrap: wrap; border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .states-label { color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+    .states-list { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; justify-content: center; }
+    .states-list li { color: var(--white); font-size: 0.85rem; font-weight: 500; display: flex; align-items: center; gap: 0.4rem; }
+    .states-list li::before { content: '●'; color: var(--accent); font-size: 0.5rem; }
+
+    nav {
+      position: fixed; top: var(--states-bar-height); left: 0; right: 0; z-index: 100;
+      background: rgba(11,31,58,0.96); backdrop-filter: blur(10px);
+      padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 68px;
+    }
+    .nav-logo { font-family: var(--font-head); font-size: 1.35rem; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.02em; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--accent); color: var(--white) !important; padding: 0.55rem 1.3rem; border-radius: 8px; font-size: 0.9rem; font-weight: 500; text-decoration: none; transition: background .2s; }
+    .nav-cta:hover { background: var(--accent-light) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { width: 24px; height: 2px; background: white; display: block; }
+
+    .page-header {
+      background: linear-gradient(135deg, var(--navy) 0%, #132d52 60%, #1a3a6e 100%);
+      padding: calc(var(--states-bar-height) + 68px + 56px) 5% 56px;
+      position: relative; overflow: hidden;
+    }
+    .page-header-inner { max-width: 860px; margin: 0 auto; position: relative; z-index: 1; }
+    .hero-bg-pattern { position: absolute; inset: 0; opacity: 0.05; background-image: radial-gradient(circle at 25% 35%, #fff 1px, transparent 1px), radial-gradient(circle at 75% 65%, #fff 1px, transparent 1px); background-size: 60px 60px; }
+    .page-header-badge { display: inline-block; background: rgba(232,98,42,0.2); border: 1px solid rgba(232,98,42,0.5); color: #f5a47c; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 100px; margin-bottom: 1rem; }
+    .page-header h1 { font-family: var(--font-head); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; color: var(--white); line-height: 1.2; letter-spacing: -0.025em; margin-bottom: 0.6rem; }
+    .page-header p { color: rgba(255,255,255,0.55); font-size: 0.9rem; }
+
+    .policy-wrapper {
+      max-width: 860px; margin: 0 auto; padding: 60px 5% 100px;
+      color: #333; line-height: 1.8;
+    }
+    .policy-wrapper h1 { display: none; }
+    .policy-wrapper h2 {
+      font-family: var(--font-head); font-size: 1.25rem; font-weight: 700;
+      color: var(--navy); margin: 2.5rem 0 0.75rem; padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--gray-100);
+    }
+    .policy-wrapper h3 {
+      font-family: var(--font-head); font-size: 1rem; font-weight: 600;
+      color: var(--navy); margin: 1.75rem 0 0.5rem;
+    }
+    .policy-wrapper p { font-size: 0.95rem; color: #444; margin-bottom: 1rem; }
+    .policy-wrapper ul { margin: 0.5rem 0 1rem 1.5rem; }
+    .policy-wrapper ul li { font-size: 0.95rem; color: #444; margin-bottom: 0.75rem; line-height: 1.7; }
+    .policy-wrapper a { color: var(--accent); text-decoration: none; }
+    .policy-wrapper a:hover { text-decoration: underline; }
+    .policy-wrapper strong { color: #222; }
+
+    footer { background: var(--navy); padding: 4rem 5% 2rem; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .footer-brand .nav-logo { font-size: 1.25rem; display: inline-block; margin-bottom: 0.75rem; }
+    .footer-brand p { font-size: 0.85rem; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 260px; }
+    .footer-col h5 { font-family: var(--font-head); font-size: 0.85rem; font-weight: 600; color: var(--white); margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-col ul a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 0.85rem; transition: color .2s; }
+    .footer-col ul a:hover { color: var(--white); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-top: 2rem; }
+    .footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+    .footer-legal { display: flex; gap: 1.5rem; }
+    .footer-legal a { font-size: 0.8rem; color: rgba(255,255,255,0.3); text-decoration: none; }
+    .footer-legal a:hover { color: rgba(255,255,255,0.6); }
+
+    @media (max-width: 768px) {
+      .states-bar { display: none; }
+      nav { top: 0; }
+      .page-header { padding-top: calc(68px + 40px); }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .mobile-menu { display: none; position: fixed; top: 68px; left: 0; right: 0; background: var(--navy); padding: 1.5rem; z-index: 99; flex-direction: column; gap: 1rem; }
+      .mobile-menu.open { display: flex; }
+      .mobile-menu a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 1rem; padding: 0.5rem 0; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 480px) { .footer-top { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<div class="states-bar">
+  <span class="states-label">Available States</span>
+  <ul class="states-list"><li>Georgia</li><li>Texas</li><li>Illinois</li><li>Colorado</li></ul>
+</div>
+
+<nav id="navbar">
+  <a href="/" class="nav-logo">Metro<span>Locators</span></a>
+  <ul class="nav-links">
+    <li><a href="/#how">How It Works</a></li>
+    <li><a href="/#listings">Apartments</a></li>
+    <li><a href="/blog.html">Blog</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/services.html">Services</a></li>
+    <li><a href="https://agent.reliverealty.com/MetroLocators" class="nav-cta">Find My Apartment</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/#how" onclick="toggleMenu()">How It Works</a>
+  <a href="/#listings" onclick="toggleMenu()">Apartments</a>
+  <a href="/blog.html" onclick="toggleMenu()">Blog</a>
+  <a href="/about.html" onclick="toggleMenu()">About</a>
+  <a href="/services.html" onclick="toggleMenu()">Services</a>
+  <a href="https://agent.reliverealty.com/MetroLocators" onclick="toggleMenu()">Find My Apartment</a>
+</div>
+
+<div class="page-header">
+  <div class="hero-bg-pattern"></div>
+  <div class="page-header-inner">
+    <span class="page-header-badge">Legal</span>
+    <h1>Terms and Conditions</h1>
+    <p>Last updated May 01, 2026 &nbsp;·&nbsp; Metro Locators LLC</p>
+  </div>
+</div>
+
+<div class="policy-wrapper">
+
+<h1>Terms and Conditions</h1>
+<p>Last updated: May 01, 2026</p>
+<p>Please read these terms and conditions carefully before using Our Service.</p>
+<h2>Interpretation and Definitions</h2>
+<h3>Interpretation</h3>
+<p>The words whose initial letters are capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
+<h3>Definitions</h3>
+<p>For the purposes of these Terms and Conditions:</p>
+<ul>
+<li>
+<p><strong>Affiliate</strong> means an entity that controls, is controlled by, or is under common control with a party, where &quot;control&quot; means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</p>
+</li>
+<li>
+<p><strong>Country</strong> refers to: Georgia, United States</p>
+</li>
+<li>
+<p><strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in these Terms and Conditions) refers to Metro Locators, 1445 Woodmont Ln Atlanta, GA 30318.</p>
+</li>
+<li>
+<p><strong>Device</strong> means any device that can access the Service such as a computer, a cell phone or a digital tablet.</p>
+</li>
+<li>
+<p><strong>Service</strong> refers to the Website.</p>
+</li>
+<li>
+<p><strong>Terms and Conditions</strong> (also referred to as &quot;Terms&quot;) means these Terms and Conditions, including any documents expressly incorporated by reference, which govern Your access to and use of the Service and form the entire agreement between You and the Company regarding the Service. These Terms and Conditions have been created with the help of the <a href="https://www.termsfeed.com/terms-conditions-generator/" target="_blank" rel="noopener">TermsFeed Terms and Conditions Generator</a>.</p>
+</li>
+<li>
+<p><strong>Third-Party Social Media Service</strong> means any services or content (including data, information, products or services) provided by a third party that is displayed, included, made available, or linked to through the Service.</p>
+</li>
+<li>
+<p><strong>Website</strong> refers to Metro Locators, accessible from <a href="https://metrolocators.com" target="_blank" rel="noopener">metrolocators.com</a></p>
+</li>
+<li>
+<p><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</p>
+</li>
+</ul>
+<h2>Acknowledgment</h2>
+<p>These are the Terms and Conditions governing the use of this Service and the agreement between You and the Company. These Terms and Conditions set out the rights and obligations of all users regarding the use of the Service.</p>
+<p>Your access to and use of the Service is conditioned on Your acceptance of and compliance with these Terms and Conditions. These Terms and Conditions apply to all visitors, users and others who access or use the Service.</p>
+<p>By accessing or using the Service You agree to be bound by these Terms and Conditions. If You disagree with any part of these Terms and Conditions then You may not access the Service.</p>
+<p>You represent that you are over the age of 18. The Company does not permit those under 18 to use the Service.</p>
+<p>Your access to and use of the Service is also subject to Our Privacy Policy, which describes how We collect, use, and disclose personal information. Please read Our <a href="/privacy-policy.html">Privacy Policy</a> carefully before using Our Service.</p>
+<h2>Links to Other Websites</h2>
+<p>Our Service may contain links to third-party websites or services that are not owned or controlled by the Company.</p>
+<p>The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third-party websites or services. You further acknowledge and agree that the Company shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods or services available on or through any such websites or services.</p>
+<p>We strongly advise You to read the terms and conditions and privacy policies of any third-party websites or services that You visit.</p>
+<h3>Links from a Third-Party Social Media Service</h3>
+<p>The Service may display, include, make available, or link to content or services provided by a Third-Party Social Media Service. A Third-Party Social Media Service is not owned or controlled by the Company, and the Company does not endorse or assume responsibility for any Third-Party Social Media Service.</p>
+<p>You acknowledge and agree that the Company shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with Your access to or use of any Third-Party Social Media Service, including any content, goods, or services made available through them. Your use of any Third-Party Social Media Service is governed by that Third-Party Social Media Service's terms and privacy policies.</p>
+<h2>Termination</h2>
+<p>We may terminate or suspend Your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach these Terms and Conditions.</p>
+<p>Upon termination, Your right to use the Service will cease immediately.</p>
+<h2>Limitation of Liability</h2>
+<p>Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of these Terms and Your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You through the Service or 100 USD if You haven't purchased anything through the Service.</p>
+<p>To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever (including, but not limited to, damages for loss of profits, loss of data or other information, for business interruption, for personal injury, loss of privacy arising out of or in any way related to the use of or inability to use the Service, third-party software and/or third-party hardware used with the Service, or otherwise in connection with any provision of these Terms), even if the Company or any supplier has been advised of the possibility of such damages and even if the remedy fails of its essential purpose.</p>
+<p>Some states do not allow the exclusion of implied warranties or limitation of liability for incidental or consequential damages, which means that some of the above limitations may not apply. In these states, each party's liability will be limited to the greatest extent permitted by law.</p>
+<h2>&quot;AS IS&quot; and &quot;AS AVAILABLE&quot; Disclaimer</h2>
+<p>The Service is provided to You &quot;AS IS&quot; and &quot;AS AVAILABLE&quot; and with all faults and defects without warranty of any kind. To the maximum extent permitted under applicable law, the Company, on its own behalf and on behalf of its Affiliates and its and their respective licensors and service providers, expressly disclaims all warranties, whether express, implied, statutory or otherwise, with respect to the Service, including all implied warranties of merchantability, fitness for a particular purpose, title and non-infringement, and warranties that may arise out of course of dealing, course of performance, usage or trade practice. Without limitation to the foregoing, the Company provides no warranty or undertaking, and makes no representation of any kind that the Service will meet Your requirements, achieve any intended results, be compatible or work with any other software, applications, systems or services, operate without interruption, meet any performance or reliability standards or be error free or that any errors or defects can or will be corrected.</p>
+<p>Without limiting the foregoing, neither the Company nor any of the company's provider makes any representation or warranty of any kind, express or implied: (i) as to the operation or availability of the Service, or the information, content, and materials or products included thereon; (ii) that the Service will be uninterrupted or error-free; (iii) as to the accuracy, reliability, or currency of any information or content provided through the Service; or (iv) that the Service, its servers, the content, or e-mails sent from or on behalf of the Company are free of viruses, scripts, trojan horses, worms, malware, timebombs or other harmful components.</p>
+<p>Some jurisdictions do not allow the exclusion of certain types of warranties or limitations on applicable statutory rights of a consumer, so some or all of the above exclusions and limitations may not apply to You. But in such a case the exclusions and limitations set forth in this section shall be applied to the greatest extent enforceable under applicable law.</p>
+<h2>Governing Law</h2>
+<p>The laws of the Country, excluding its conflicts of law rules, shall govern these Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws.</p>
+<h2>Disputes Resolution</h2>
+<p>If You have any concern or dispute about the Service, You agree to first try to resolve the dispute informally by contacting the Company.</p>
+<h2>For European Union (EU) Users</h2>
+<p>If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country in which You are resident.</p>
+<h2>United States Legal Compliance</h2>
+<p>You represent and warrant that (i) You are not located in a country that is subject to the United States government embargo, or that has been designated by the United States government as a &quot;terrorist supporting&quot; country, and (ii) You are not listed on any United States government list of prohibited or restricted parties.</p>
+<h2>Severability and Waiver</h2>
+<h3>Severability</h3>
+<p>If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.</p>
+<h3>Waiver</h3>
+<p>Except as provided herein, the failure to exercise a right or to require performance of an obligation under these Terms shall not affect a party's ability to exercise such right or require such performance at any time thereafter nor shall the waiver of a breach constitute a waiver of any subsequent breach.</p>
+<h2>Translation Interpretation</h2>
+<p>These Terms and Conditions may have been translated if We have made them available to You on our Service. You agree that the original English text shall prevail in the case of a dispute.</p>
+<h2>Changes to These Terms and Conditions</h2>
+<p>We reserve the right, at Our sole discretion, to modify or replace these Terms at any time. If a revision is material We will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at Our sole discretion.</p>
+<p>By continuing to access or use Our Service after those revisions become effective, You agree to be bound by the revised terms. If You do not agree to the new terms, in whole or in part, please stop using the Service.</p>
+<h2>Contact Us</h2>
+<p>If you have any questions about these Terms and Conditions, You can contact us:</p>
+<ul>
+<li>By email: <a href="mailto:info@metrolocators.com">info@metrolocators.com</a></li>
+</ul>
+
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="/" class="nav-logo">Metro<span>Locators</span></a>
+      <p>Atlanta's free apartment locating service. We match renters with their perfect home at no cost — ever.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/services.html">Services</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="/services.html#new-construction">New Construction Homes</a></li>
+        <li><a href="/services.html#esa">ESA Letters</a></li>
+        <li><a href="https://agent.reliverealty.com/MetroLocators">Find an Apartment</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Resources</h5>
+      <ul>
+        <li><a href="/blog/apartment-hunting-atlanta-budget.html">Apartment Hunting Guide</a></li>
+        <li><a href="/blog/esa-letter-guide.html">ESA Letter Guide</a></li>
+        <li><a href="/blog/new-construction-homes-atlanta.html">New Construction Guide</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Metro Locators LLC. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+</script>
+</body>
+</html>
