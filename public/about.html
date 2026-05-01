@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9DXBMSZXR6"></script>
+  <meta name="google-adsense-account" content="ca-pub-5290541301761290">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5290541301761290" crossorigin="anonymous"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9DXBMSZXR6');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us – Metro Locators | Free Apartment Locating Service</title>
+  <meta name="description" content="Learn how Metro Locators helps renters across Atlanta, Dallas, Chicago, and Denver find their perfect apartment — completely free of charge. Our story, mission, and values." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0b1f3a; --navy-mid: #132d52; --accent: #e8622a; --accent-light: #f5874f;
+      --gold: #f0b429; --white: #ffffff; --off: #f7f8fa; --gray-100: #eef0f4;
+      --gray-300: #c8cdd8; --gray-500: #8892a4; --gray-700: #3f4a5c; --text: #111827;
+      --radius: 12px; --font-head: 'Sora', sans-serif; --font-body: 'DM Sans', sans-serif;
+      --states-bar-height: 40px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--text); background: var(--white); overflow-x: hidden; }
+
+    .states-bar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 101;
+      background: var(--navy); padding: 0.6rem 5%; height: var(--states-bar-height);
+      display: flex; align-items: center; justify-content: center; gap: 2rem;
+      flex-wrap: wrap; border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .states-label { color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+    .states-list { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; justify-content: center; }
+    .states-list li { color: var(--white); font-size: 0.85rem; font-weight: 500; display: flex; align-items: center; gap: 0.4rem; }
+    .states-list li::before { content: '●'; color: var(--accent); font-size: 0.5rem; }
+
+    nav {
+      position: fixed; top: var(--states-bar-height); left: 0; right: 0; z-index: 100;
+      background: rgba(11,31,58,0.96); backdrop-filter: blur(10px);
+      padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 68px;
+    }
+    .nav-logo { font-family: var(--font-head); font-size: 1.35rem; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.02em; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a.active { color: var(--white); border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
+    .nav-cta { background: var(--accent); color: var(--white) !important; border: none; padding: 0.55rem 1.3rem; border-radius: 8px; font-size: 0.9rem; font-weight: 500; cursor: pointer; text-decoration: none; transition: background .2s; }
+    .nav-cta:hover { background: var(--accent-light) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { width: 24px; height: 2px; background: white; display: block; transition: .3s; }
+
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #1a3a6e 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: calc(var(--states-bar-height) + 68px + 72px) 5% 80px;
+      position: relative; overflow: hidden; text-align: center;
+    }
+    .hero-bg-pattern {
+      position: absolute; inset: 0; opacity: 0.05;
+      background-image: radial-gradient(circle at 25% 35%, #fff 1px, transparent 1px), radial-gradient(circle at 75% 65%, #fff 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .page-hero-badge {
+      background: rgba(232,98,42,0.2); border: 1px solid rgba(232,98,42,0.5);
+      color: #f5a47c; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 100px;
+      margin-bottom: 1.25rem; display: inline-block;
+    }
+    .page-hero h1 {
+      font-family: var(--font-head); font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+      font-weight: 700; color: var(--white); line-height: 1.15;
+      letter-spacing: -0.03em; max-width: 700px; margin-bottom: 1.1rem;
+    }
+    .page-hero h1 span { color: var(--accent); }
+    .page-hero p { color: rgba(255,255,255,0.65); font-size: 1.05rem; max-width: 560px; line-height: 1.75; margin: 0 auto; }
+
+    section { padding: 90px 5%; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+    .section-title { font-family: var(--font-head); font-size: clamp(1.7rem, 3.5vw, 2.4rem); font-weight: 700; color: var(--navy); letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 1rem; }
+
+    /* Story */
+    #story { background: var(--white); }
+    .story-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .story-text p { color: var(--gray-700); font-size: 1rem; line-height: 1.85; margin-bottom: 1.25rem; }
+    .story-text p:last-child { margin-bottom: 0; }
+    .story-stat-block { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .story-stat { background: var(--off); border-radius: var(--radius); padding: 1.75rem 1.5rem; text-align: center; }
+    .story-stat-num { font-family: var(--font-head); font-size: 2.2rem; font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 0.4rem; }
+    .story-stat-label { font-size: 0.85rem; color: var(--gray-500); line-height: 1.4; }
+
+    /* How we work */
+    #how-we-work { background: var(--off); }
+    .how-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
+    .how-step { background: var(--white); border-radius: var(--radius); padding: 2rem 1.5rem; border: 1px solid var(--gray-100); position: relative; }
+    .how-step-num { font-family: var(--font-head); font-size: 3rem; font-weight: 700; color: var(--gray-100); line-height: 1; margin-bottom: 0.5rem; }
+    .how-step h4 { font-family: var(--font-head); font-size: 1rem; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem; }
+    .how-step p { font-size: 0.9rem; color: var(--gray-500); line-height: 1.65; }
+
+    /* Values */
+    #values { background: var(--navy); }
+    #values .section-title { color: var(--white); }
+    #values .section-label { color: var(--gold); }
+    .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; margin-top: 2.5rem; }
+    .value-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 1.75rem 1.5rem; transition: background .2s; }
+    .value-card:hover { background: rgba(255,255,255,0.1); }
+    .value-icon { font-size: 1.8rem; margin-bottom: 0.9rem; }
+    .value-card h4 { font-family: var(--font-head); font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 0.4rem; }
+    .value-card p { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.65; }
+
+    /* Areas */
+    #areas { background: var(--off); }
+    .areas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
+    .area-card { background: var(--white); border-radius: var(--radius); padding: 1.75rem; border: 1px solid var(--gray-100); }
+    .area-state { font-family: var(--font-head); font-size: 1.1rem; font-weight: 700; color: var(--navy); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+    .area-cities { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+    .area-cities li { font-size: 0.875rem; color: var(--gray-500); display: flex; align-items: center; gap: 0.4rem; }
+    .area-cities li::before { content: '›'; color: var(--accent); font-weight: 700; }
+
+    /* CTA */
+    .about-cta { background: var(--accent); text-align: center; padding: 80px 5%; }
+    .about-cta h2 { font-family: var(--font-head); font-size: clamp(1.7rem, 3vw, 2.2rem); font-weight: 700; color: var(--white); margin-bottom: 0.75rem; }
+    .about-cta p { color: rgba(255,255,255,0.8); font-size: 1rem; max-width: 460px; margin: 0 auto 2rem; line-height: 1.7; }
+    .about-cta a { display: inline-block; background: var(--white); color: var(--accent); text-decoration: none; padding: 0.85rem 2rem; border-radius: 8px; font-family: var(--font-head); font-size: 1rem; font-weight: 700; transition: opacity .2s; }
+    .about-cta a:hover { opacity: 0.9; }
+
+    footer { background: var(--navy); padding: 4rem 5% 2rem; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .footer-brand .nav-logo { font-size: 1.25rem; display: inline-block; margin-bottom: 0.75rem; }
+    .footer-brand p { font-size: 0.85rem; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 260px; }
+    .footer-col h5 { font-family: var(--font-head); font-size: 0.85rem; font-weight: 600; color: var(--white); margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-col ul a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 0.85rem; transition: color .2s; }
+    .footer-col ul a:hover { color: var(--white); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-top: 2rem; }
+    .footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+    .footer-legal { display: flex; gap: 1.5rem; }
+    .footer-legal a { font-size: 0.8rem; color: rgba(255,255,255,0.3); text-decoration: none; }
+    .footer-legal a:hover { color: rgba(255,255,255,0.6); }
+
+    @media (max-width: 900px) { .story-layout { grid-template-columns: 1fr; gap: 3rem; } }
+    @media (max-width: 768px) {
+      .states-bar { display: none; }
+      nav { top: 0; }
+      .page-hero { padding-top: calc(68px + 48px); }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .mobile-menu { display: none; position: fixed; top: 68px; left: 0; right: 0; background: var(--navy); padding: 1.5rem; z-index: 99; flex-direction: column; gap: 1rem; }
+      .mobile-menu.open { display: flex; }
+      .mobile-menu a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 1rem; padding: 0.5rem 0; }
+      section { padding: 60px 5%; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+    @media (max-width: 480px) { .footer-top { grid-template-columns: 1fr; } }
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<div class="states-bar">
+  <span class="states-label">Available States</span>
+  <ul class="states-list">
+    <li>Georgia</li><li>Texas</li><li>Illinois</li><li>Colorado</li>
+  </ul>
+</div>
+
+<nav id="navbar">
+  <a href="/" class="nav-logo">Metro<span>Locators</span></a>
+  <ul class="nav-links">
+    <li><a href="/#how">How It Works</a></li>
+    <li><a href="/#listings">Apartments</a></li>
+    <li><a href="/blog.html">Blog</a></li>
+    <li><a href="/about.html" class="active">About</a></li>
+    <li><a href="/services.html">Services</a></li>
+    <li><a href="https://agent.reliverealty.com/MetroLocators" class="nav-cta">Find My Apartment</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/#how" onclick="toggleMenu()">How It Works</a>
+  <a href="/#listings" onclick="toggleMenu()">Apartments</a>
+  <a href="/blog.html" onclick="toggleMenu()">Blog</a>
+  <a href="/about.html" onclick="toggleMenu()">About</a>
+  <a href="/services.html" onclick="toggleMenu()">Services</a>
+  <a href="https://agent.reliverealty.com/MetroLocators" onclick="toggleMenu()">Find My Apartment</a>
+</div>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="page-hero-badge">About Metro Locators</div>
+  <h1>We Help People Find Home — <span>Free of Charge</span></h1>
+  <p>Metro Locators is a free apartment locating service built on a simple idea: finding your next home shouldn't be stressful, expensive, or time-consuming. We do the searching. You just move in.</p>
+</div>
+
+<!-- OUR STORY -->
+<section id="story">
+  <div class="section-inner">
+    <div class="story-layout">
+      <div class="story-text fade-in">
+        <div class="section-label">Our Story</div>
+        <h2 class="section-title">Built to Solve a Real Problem</h2>
+        <p>We started Metro Locators after watching renters — friends, family members, colleagues — spend weeks drowning in outdated online listings, scheduling tours at apartments that had already leased, paying fees for advice that led nowhere, and missing out on move-in specials they never even knew existed.</p>
+        <p>The apartment search process was broken. Too many renters were navigating it alone, without access to the local knowledge and community relationships that could make the difference between a frustrating search and a great outcome.</p>
+        <p>Metro Locators was built to fix that. We staff our markets with experienced, locally-rooted apartment locators who know which communities offer the best value, which buildings have the most responsive management teams, and which move-in specials are quietly available to renters who know where to look.</p>
+        <p>And because apartment communities pay us a referral fee when a renter moves in, you never see a bill from us. Our interests are completely aligned with yours — we only succeed when you find a home you love.</p>
+      </div>
+      <div class="story-stat-block fade-in">
+        <div class="story-stat">
+          <div class="story-stat-num">1,200+</div>
+          <div class="story-stat-label">Apartments in our network</div>
+        </div>
+        <div class="story-stat">
+          <div class="story-stat-num">98%</div>
+          <div class="story-stat-label">Client satisfaction rate</div>
+        </div>
+        <div class="story-stat">
+          <div class="story-stat-num">24hr</div>
+          <div class="story-stat-label">Average response time</div>
+        </div>
+        <div class="story-stat">
+          <div class="story-stat-num">4</div>
+          <div class="story-stat-label">States and growing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section id="how-we-work">
+  <div class="section-inner">
+    <div class="section-label">The Process</div>
+    <h2 class="section-title">How Our Free Model Works</h2>
+    <p style="color: var(--gray-500); max-width: 600px; line-height: 1.7; margin-bottom: 0;">Apartment communities across our service areas pay Metro Locators a referral fee when a renter we refer signs a lease. This is a standard, industry-wide practice — the same way a staffing agency is paid by the employer, not the job seeker. You receive expert guidance, local knowledge, and personalized support at no cost to you, ever.</p>
+    <div class="how-grid">
+      <div class="how-step fade-in">
+        <div class="how-step-num">01</div>
+        <h4>You Tell Us What You Need</h4>
+        <p>Budget, neighborhood preferences, move-in date, pet situation, must-haves — we take it all in with a quick intake form. Takes under two minutes.</p>
+      </div>
+      <div class="how-step fade-in">
+        <div class="how-step-num">02</div>
+        <h4>We Search Our Full Network</h4>
+        <p>Your locator searches hundreds of listings — including off-market units and communities with unpublished specials — to surface the best matches for your criteria.</p>
+      </div>
+      <div class="how-step fade-in">
+        <div class="how-step-num">03</div>
+        <h4>You Tour Your Top Picks</h4>
+        <p>We schedule tours at your convenience, coordinate with community leasing teams, and accompany you (virtually or in person) so you have support throughout.</p>
+      </div>
+      <div class="how-step fade-in">
+        <div class="how-step-num">04</div>
+        <h4>We Help You Close the Deal</h4>
+        <p>From application to lease signing, your locator is available to answer questions, flag red flags, and help you navigate the fine print. No pressure, ever.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section id="values">
+  <div class="section-inner">
+    <div class="section-label">What We Stand For</div>
+    <h2 class="section-title">Our Values</h2>
+    <div class="values-grid">
+      <div class="value-card fade-in">
+        <div class="value-icon">🔍</div>
+        <h4>Transparency</h4>
+        <p>We're upfront about how we earn our fee, who pays it, and what you can expect from us. No hidden costs, no surprises.</p>
+      </div>
+      <div class="value-card fade-in">
+        <div class="value-icon">🏙️</div>
+        <h4>Local Expertise</h4>
+        <p>Our locators live and work in the markets they serve. We know the neighborhoods, the buildings, and the landlords — not just the listings.</p>
+      </div>
+      <div class="value-card fade-in">
+        <div class="value-icon">🤝</div>
+        <h4>Client First</h4>
+        <p>We work for the renter, not the apartment community. Our recommendations are driven by your needs, not by who pays the highest referral fee.</p>
+      </div>
+      <div class="value-card fade-in">
+        <div class="value-icon">⚡</div>
+        <h4>Speed</h4>
+        <p>Atlanta's rental market moves fast. We respond within 24 hours and keep your search moving so you don't lose out on a great unit.</p>
+      </div>
+      <div class="value-card fade-in">
+        <div class="value-icon">🔒</div>
+        <h4>No Pressure</h4>
+        <p>We never push you toward a unit you're not excited about. Our job is done when you find the right home — not the first available one.</p>
+      </div>
+      <div class="value-card fade-in">
+        <div class="value-icon">📱</div>
+        <h4>Always Available</h4>
+        <p>Questions on a Sunday evening? Lease confusion at 10pm? Your locator is reachable seven days a week throughout your entire search.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section id="areas">
+  <div class="section-inner">
+    <div class="section-label">Where We Operate</div>
+    <h2 class="section-title">Our Service Areas</h2>
+    <p style="color: var(--gray-500); max-width: 580px; line-height: 1.7; margin-bottom: 0;">Metro Locators currently serves major metro areas across four states, with active expansion underway. Each market is staffed by locators with deep local knowledge of neighborhoods, pricing, and available inventory.</p>
+    <div class="areas-grid">
+      <div class="area-card fade-in">
+        <div class="area-state">🍑 Georgia</div>
+        <ul class="area-cities">
+          <li>Atlanta (Midtown, Buckhead, East Atlanta)</li>
+          <li>Dunwoody &amp; Sandy Springs</li>
+          <li>Decatur &amp; Brookhaven</li>
+          <li>Alpharetta &amp; Roswell</li>
+          <li>Smyrna &amp; Marietta</li>
+        </ul>
+      </div>
+      <div class="area-card fade-in">
+        <div class="area-state">⭐ Texas</div>
+        <ul class="area-cities">
+          <li>Dallas – Fort Worth Metroplex</li>
+          <li>Houston</li>
+          <li>Austin</li>
+          <li>San Antonio</li>
+        </ul>
+      </div>
+      <div class="area-card fade-in">
+        <div class="area-state">🌃 Illinois</div>
+        <ul class="area-cities">
+          <li>Chicago (Lincoln Park, Wicker Park)</li>
+          <li>Evanston &amp; Oak Park</li>
+          <li>Naperville &amp; Schaumburg</li>
+        </ul>
+      </div>
+      <div class="area-card fade-in">
+        <div class="area-state">🏔️ Colorado</div>
+        <ul class="area-cities">
+          <li>Denver (Capitol Hill, RiNo, LoHi)</li>
+          <li>Aurora &amp; Lakewood</li>
+          <li>Boulder &amp; Fort Collins</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="about-cta">
+  <h2>Start Your Search Today</h2>
+  <p>Meet your free apartment locator and get personalized matches within 24 hours. No cost, no commitment — just great apartments picked for you.</p>
+  <a href="https://agent.reliverealty.com/MetroLocators">Find My Apartment — Free</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="/" class="nav-logo">Metro<span>Locators</span></a>
+      <p>Your free, local apartment locating service across Atlanta and beyond.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/#how">How It Works</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Renters</h5>
+      <ul>
+        <li><a href="/#listings">Browse Apartments</a></li>
+        <li><a href="/#cities">Service Areas</a></li>
+        <li><a href="https://agent.reliverealty.com/MetroLocators">Get Started Free</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="/services.html">All Services</a></li>
+        <li><a href="https://theraineypropertygroup.com" target="_blank" rel="noopener">New Construction Homes</a></li>
+        <li><a href="https://pettable.referral-factory.com/uWjzzum4" target="_blank" rel="noopener">ESA Letters</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Metro Locators. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Accessibility</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

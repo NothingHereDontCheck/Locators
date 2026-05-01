@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9DXBMSZXR6"></script>
   <meta name="google-adsense-account" content="ca-pub-5290541301761290">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5290541301761290"
-crossorigin="anonymous"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5290541301761290" crossorigin="anonymous"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -14,98 +12,59 @@ crossorigin="anonymous"></script>
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services – Metro Locators</title>
+  <title>Services – Metro Locators | New Construction Homes & ESA Letters</title>
+  <meta name="description" content="Metro Locators offers more than apartment finding. Explore new construction homes through The Rainey Property Group and get your ESA letter through our trusted partner." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --navy: #0b1f3a;
-      --navy-mid: #132d52;
-      --accent: #e8622a;
-      --accent-light: #f5874f;
-      --gold: #f0b429;
-      --white: #ffffff;
-      --off: #f7f8fa;
-      --gray-100: #eef0f4;
-      --gray-300: #c8cdd8;
-      --gray-500: #8892a4;
-      --gray-700: #3f4a5c;
-      --text: #111827;
-      --radius: 12px;
-      --font-head: 'Sora', sans-serif;
-      --font-body: 'DM Sans', sans-serif;
+      --navy: #0b1f3a; --navy-mid: #132d52; --accent: #e8622a; --accent-light: #f5874f;
+      --gold: #f0b429; --white: #ffffff; --off: #f7f8fa; --gray-100: #eef0f4;
+      --gray-300: #c8cdd8; --gray-500: #8892a4; --gray-700: #3f4a5c; --text: #111827;
+      --radius: 12px; --font-head: 'Sora', sans-serif; --font-body: 'DM Sans', sans-serif;
       --states-bar-height: 40px;
     }
-
     html { scroll-behavior: smooth; }
     body { font-family: var(--font-body); color: var(--text); background: var(--white); overflow-x: hidden; }
 
-    /* ── STATES BAR ── */
     .states-bar {
       position: fixed; top: 0; left: 0; right: 0; z-index: 101;
-      background: var(--navy); padding: 0.6rem 5%;
-      height: var(--states-bar-height);
+      background: var(--navy); padding: 0.6rem 5%; height: var(--states-bar-height);
       display: flex; align-items: center; justify-content: center; gap: 2rem;
       flex-wrap: wrap; border-bottom: 1px solid rgba(255,255,255,0.1);
     }
-    .states-label {
-      color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 600;
-      text-transform: uppercase; letter-spacing: 0.08em;
-    }
-    .states-list {
-      display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; justify-content: center;
-    }
-    .states-list li {
-      color: var(--white); font-size: 0.85rem; font-weight: 500;
-      display: flex; align-items: center; gap: 0.4rem;
-    }
-    .states-list li::before {
-      content: '●'; color: var(--accent); font-size: 0.5rem;
-    }
+    .states-label { color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; }
+    .states-list { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; justify-content: center; }
+    .states-list li { color: var(--white); font-size: 0.85rem; font-weight: 500; display: flex; align-items: center; gap: 0.4rem; }
+    .states-list li::before { content: '●'; color: var(--accent); font-size: 0.5rem; }
 
-    /* ── NAV ── */
     nav {
       position: fixed; top: var(--states-bar-height); left: 0; right: 0; z-index: 100;
-      background: rgba(11, 31, 58, 0.96);
-      backdrop-filter: blur(10px);
-      padding: 0 5%;
-      display: flex; align-items: center; justify-content: space-between;
-      height: 68px;
+      background: rgba(11,31,58,0.96); backdrop-filter: blur(10px);
+      padding: 0 5%; display: flex; align-items: center; justify-content: space-between; height: 68px;
     }
-    .nav-logo {
-      font-family: var(--font-head); font-size: 1.35rem; font-weight: 700;
-      color: var(--white); text-decoration: none; letter-spacing: -0.02em;
-    }
+    .nav-logo { font-family: var(--font-head); font-size: 1.35rem; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: -0.02em; }
     .nav-logo span { color: var(--accent); }
     .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
     .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color .2s; }
     .nav-links a:hover { color: var(--white); }
     .nav-links a.active { color: var(--white); border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
-    .nav-cta {
-      background: var(--accent); color: var(--white); border: none;
-      padding: 0.55rem 1.3rem; border-radius: 8px;
-      font-family: var(--font-body); font-size: 0.9rem; font-weight: 500;
-      cursor: pointer; text-decoration: none; transition: background .2s;
-    }
-    .nav-cta:hover { background: var(--accent-light); }
+    .nav-cta { background: var(--accent); color: var(--white) !important; border: none; padding: 0.55rem 1.3rem; border-radius: 8px; font-size: 0.9rem; font-weight: 500; cursor: pointer; text-decoration: none; transition: background .2s; }
+    .nav-cta:hover { background: var(--accent-light) !important; }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
     .hamburger span { width: 24px; height: 2px; background: white; display: block; transition: .3s; }
 
-    /* ── PAGE HERO ── */
     .page-hero {
-      min-height: 100vh;
       background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, #1a3a6e 100%);
       display: flex; flex-direction: column; align-items: center; justify-content: center;
-      padding: calc(var(--states-bar-height) + 68px + 48px) 5% 80px;
+      padding: calc(var(--states-bar-height) + 68px + 56px) 5% 72px;
       position: relative; overflow: hidden;
     }
     .hero-bg-pattern {
       position: absolute; inset: 0; opacity: 0.05;
-      background-image: radial-gradient(circle at 25% 35%, #fff 1px, transparent 1px),
-        radial-gradient(circle at 75% 65%, #fff 1px, transparent 1px);
+      background-image: radial-gradient(circle at 25% 35%, #fff 1px, transparent 1px), radial-gradient(circle at 75% 65%, #fff 1px, transparent 1px);
       background-size: 60px 60px;
     }
     .page-hero-badge {
@@ -117,135 +76,145 @@ crossorigin="anonymous"></script>
     .page-hero h1 {
       font-family: var(--font-head); font-size: clamp(2rem, 4.5vw, 3rem);
       font-weight: 700; color: var(--white); text-align: center;
-      line-height: 1.15; letter-spacing: -0.03em; max-width: 640px;
-      margin-bottom: 0.85rem;
+      line-height: 1.15; letter-spacing: -0.03em; max-width: 640px; margin-bottom: 0.85rem;
     }
     .page-hero h1 span { color: var(--accent); }
-    .page-hero p {
-      color: rgba(255,255,255,0.6); font-size: 1rem; text-align: center;
-      max-width: 480px; line-height: 1.7; margin-bottom: 3rem;
-    }
+    .page-hero p { color: rgba(255,255,255,0.6); font-size: 1rem; text-align: center; max-width: 500px; line-height: 1.7; margin-bottom: 3rem; }
 
-    /* ── SERVICE CARDS ── */
-    .services-stack {
-      display: flex; flex-direction: column; gap: 1rem;
-      width: 100%; max-width: 520px; position: relative; z-index: 2;
-    }
+    .services-stack { display: flex; flex-direction: column; gap: 1rem; width: 100%; max-width: 560px; position: relative; z-index: 2; }
     .service-card {
       display: flex; align-items: center; gap: 1.25rem;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.15);
-      border-radius: var(--radius);
-      padding: 1.35rem 1.5rem;
-      text-decoration: none;
-      color: var(--white);
-      transition: background .2s, transform .2s, border-color .2s;
-      backdrop-filter: blur(6px);
+      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius); padding: 1.35rem 1.5rem;
+      text-decoration: none; color: var(--white);
+      transition: background .2s, transform .2s, border-color .2s; backdrop-filter: blur(6px);
     }
-    .service-card:hover {
-      background: rgba(232,98,42,0.18);
-      border-color: rgba(232,98,42,0.55);
-      transform: translateY(-3px);
-    }
-    .service-icon {
-      width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
-      background: rgba(232,98,42,0.2);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem;
-    }
+    .service-card:hover { background: rgba(232,98,42,0.18); border-color: rgba(232,98,42,0.55); transform: translateY(-3px); }
+    .service-icon { width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0; background: rgba(232,98,42,0.2); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
     .service-text { flex: 1; }
-    .service-title {
-      font-family: var(--font-head); font-size: 1.05rem; font-weight: 600;
-      margin-bottom: 0.2rem;
-    }
-    .service-desc {
-      font-size: 0.83rem; color: rgba(255,255,255,0.55); line-height: 1.45;
-    }
-    .service-arrow {
-      font-size: 1.1rem; color: rgba(255,255,255,0.4);
-      transition: color .2s, transform .2s;
-    }
-    .service-card:hover .service-arrow {
-      color: var(--accent-light); transform: translateX(4px);
-    }
+    .service-title { font-family: var(--font-head); font-size: 1.05rem; font-weight: 600; margin-bottom: 0.2rem; }
+    .service-desc { font-size: 0.83rem; color: rgba(255,255,255,0.55); line-height: 1.45; }
+    .service-arrow { font-size: 1.1rem; color: rgba(255,255,255,0.4); transition: color .2s, transform .2s; }
+    .service-card:hover .service-arrow { color: var(--accent-light); transform: translateX(4px); }
 
-    /* ── FOOTER ── */
-    footer {
-      background: var(--navy); padding: 3rem 5% 2rem;
+    section { padding: 90px 5%; }
+    .section-inner { max-width: 1100px; margin: 0 auto; }
+    .section-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+    .section-title { font-family: var(--font-head); font-size: clamp(1.7rem, 3.5vw, 2.4rem); font-weight: 700; color: var(--navy); letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 1rem; }
+    .section-body { color: var(--gray-700); font-size: 1rem; line-height: 1.8; max-width: 720px; margin-bottom: 2.5rem; }
+
+    .service-detail { background: var(--white); }
+    .service-detail.alt { background: var(--off); }
+    .detail-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .detail-text {}
+    .detail-text .section-body { margin-bottom: 1.5rem; }
+    .detail-text p + p { margin-top: 1rem; }
+    .detail-cta {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--accent); color: var(--white); text-decoration: none;
+      padding: 0.75rem 1.6rem; border-radius: 8px; font-family: var(--font-head);
+      font-size: 0.95rem; font-weight: 600; transition: background .2s; margin-top: 1rem;
     }
-    .footer-bottom {
-      display: flex; align-items: center; justify-content: space-between;
-      flex-wrap: wrap; gap: 1rem;
+    .detail-cta:hover { background: var(--accent-light); }
+
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
+    .feature-list li {
+      display: flex; align-items: flex-start; gap: 0.85rem;
+      background: var(--white); border: 1px solid var(--gray-100);
+      border-radius: var(--radius); padding: 1.1rem 1.25rem;
     }
+    .service-detail.alt .feature-list li { background: var(--white); }
+    .feature-list-icon { font-size: 1.25rem; flex-shrink: 0; margin-top: 1px; }
+    .feature-list-text h4 { font-family: var(--font-head); font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 0.25rem; }
+    .feature-list-text p { font-size: 0.875rem; color: var(--gray-500); line-height: 1.6; }
+
+    #faq { background: var(--navy); }
+    #faq .section-title { color: var(--white); }
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
+    .faq-item { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 1.5rem; }
+    .faq-q { font-family: var(--font-head); font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 0.75rem; }
+    .faq-a { font-size: 0.875rem; color: rgba(255,255,255,0.6); line-height: 1.7; }
+
+    .bottom-cta { background: var(--accent); text-align: center; padding: 80px 5%; }
+    .bottom-cta h2 { font-family: var(--font-head); font-size: clamp(1.7rem, 3vw, 2.2rem); font-weight: 700; color: var(--white); margin-bottom: 0.75rem; }
+    .bottom-cta p { color: rgba(255,255,255,0.8); font-size: 1rem; max-width: 480px; margin: 0 auto 2rem; line-height: 1.7; }
+    .bottom-cta a { display: inline-block; background: var(--white); color: var(--accent); text-decoration: none; padding: 0.85rem 2rem; border-radius: 8px; font-family: var(--font-head); font-size: 1rem; font-weight: 700; transition: opacity .2s; }
+    .bottom-cta a:hover { opacity: 0.9; }
+
+    footer { background: var(--navy); padding: 4rem 5% 2rem; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .footer-brand .nav-logo { font-size: 1.25rem; display: inline-block; margin-bottom: 0.75rem; }
+    .footer-brand p { font-size: 0.85rem; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 260px; }
+    .footer-col h5 { font-family: var(--font-head); font-size: 0.85rem; font-weight: 600; color: var(--white); margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .footer-col ul a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 0.85rem; transition: color .2s; }
+    .footer-col ul a:hover { color: var(--white); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-top: 2rem; }
     .footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
     .footer-legal { display: flex; gap: 1.5rem; }
     .footer-legal a { font-size: 0.8rem; color: rgba(255,255,255,0.3); text-decoration: none; }
     .footer-legal a:hover { color: rgba(255,255,255,0.6); }
 
-    /* ── MOBILE ── */
+    @media (max-width: 900px) {
+      .detail-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .faq-grid { grid-template-columns: 1fr; }
+    }
     @media (max-width: 768px) {
       .states-bar { display: none; }
       nav { top: 0; }
       .page-hero { padding-top: calc(68px + 48px); }
       .nav-links { display: none; }
       .hamburger { display: flex; }
-      .mobile-menu {
-        display: none; position: fixed; top: 68px; left: 0; right: 0;
-        background: var(--navy); padding: 1.5rem; z-index: 99;
-        flex-direction: column; gap: 1rem;
-      }
+      .mobile-menu { display: none; position: fixed; top: 68px; left: 0; right: 0; background: var(--navy); padding: 1.5rem; z-index: 99; flex-direction: column; gap: 1rem; }
       .mobile-menu.open { display: flex; }
       .mobile-menu a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 1rem; padding: 0.5rem 0; }
+      section { padding: 60px 5%; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .footer-brand { grid-column: 1 / -1; }
     }
+    @media (max-width: 480px) { .footer-top { grid-template-columns: 1fr; } }
+    .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
   </style>
 </head>
 <body>
 
-<!-- STATES BAR -->
 <div class="states-bar">
   <span class="states-label">Available States</span>
   <ul class="states-list">
-    <li>Georgia</li>
-    <li>Texas</li>
-    <li>Illinois</li>
-    <li>Colorado</li>
+    <li>Georgia</li><li>Texas</li><li>Illinois</li><li>Colorado</li>
   </ul>
 </div>
 
-<!-- NAV -->
 <nav id="navbar">
   <a href="/" class="nav-logo">Metro<span>Locators</span></a>
   <ul class="nav-links">
     <li><a href="/#how">How It Works</a></li>
     <li><a href="/#listings">Apartments</a></li>
-    <li><a href="/#why">Why Us</a></li>
-    <li><a href="/#cities">Cities</a></li>
+    <li><a href="/blog.html">Blog</a></li>
+    <li><a href="/about.html">About</a></li>
     <li><a href="/services.html" class="active">Services</a></li>
     <li><a href="https://agent.reliverealty.com/MetroLocators" class="nav-cta">Find My Apartment</a></li>
   </ul>
-  <div class="hamburger" onclick="toggleMenu()" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </div>
+  <div class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></div>
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
   <a href="/#how" onclick="toggleMenu()">How It Works</a>
   <a href="/#listings" onclick="toggleMenu()">Apartments</a>
-  <a href="/#why" onclick="toggleMenu()">Why Us</a>
-  <a href="/#cities" onclick="toggleMenu()">Cities</a>
+  <a href="/blog.html" onclick="toggleMenu()">Blog</a>
+  <a href="/about.html" onclick="toggleMenu()">About</a>
   <a href="/services.html" onclick="toggleMenu()">Services</a>
   <a href="https://agent.reliverealty.com/MetroLocators" onclick="toggleMenu()">Find My Apartment</a>
 </div>
 
-<!-- PAGE HERO -->
+<!-- HERO -->
 <div class="page-hero">
   <div class="hero-bg-pattern"></div>
-  <div class="page-hero-badge">All Our Services</div>
-  <h1>What We <span>Offer</span></h1>
-  <p>Beyond apartment locating — explore everything Metro Locators can do for you.</p>
-
+  <div class="page-hero-badge">Everything We Offer</div>
+  <h1>More Than <span>Apartment Locating</span></h1>
+  <p>Metro Locators connects you with the services you need to find, secure, and settle into your next home — all in one place.</p>
   <div class="services-stack">
-
     <a href="https://theraineypropertygroup.com" target="_blank" rel="noopener" class="service-card">
       <div class="service-icon">🏡</div>
       <div class="service-text">
@@ -254,7 +223,6 @@ crossorigin="anonymous"></script>
       </div>
       <div class="service-arrow">›</div>
     </a>
-
     <a href="https://pettable.referral-factory.com/uWjzzum4" target="_blank" rel="noopener" class="service-card">
       <div class="service-icon">🐾</div>
       <div class="service-text">
@@ -263,26 +231,208 @@ crossorigin="anonymous"></script>
       </div>
       <div class="service-arrow">›</div>
     </a>
-
   </div>
+</div>
+
+<!-- NEW CONSTRUCTION SECTION -->
+<section id="new-construction" class="service-detail">
+  <div class="section-inner">
+    <div class="detail-layout fade-in">
+      <div class="detail-text">
+        <div class="section-label">Real Estate</div>
+        <h2 class="section-title">New Construction Homes in Atlanta</h2>
+        <div class="section-body">
+          <p>Through our partnership with The Rainey Property Group, Metro Locators connects buyers with brand-new construction properties across the greater Atlanta metro area. Whether you're purchasing your first home, upgrading your living situation, or relocating from out of state, we guide you through the entire process — from initial search to closing day — at no cost to you as the buyer.</p>
+          <p>New construction offers advantages that older homes simply cannot match. You'll benefit from modern floor plans designed around today's lifestyles, energy-efficient systems that lower monthly utility costs, and builder warranties that protect your investment for years after move-in. In many cases, buyers who get in early on a development can lock in pre-construction pricing that's significantly below market value by the time the neighborhood is complete.</p>
+          <p>Atlanta's new construction market is one of the most active in the Southeast. From affordable townhomes in the western suburbs to executive single-family homes in Alpharetta, Milton, and Cherokee County, there's a wide range of options for every budget and lifestyle. Our team stays current on what's being built, what's selling, and what incentives builders are currently offering — so you don't have to.</p>
+        </div>
+        <a href="https://theraineypropertygroup.com" target="_blank" rel="noopener" class="detail-cta">Browse New Homes →</a>
+      </div>
+      <ul class="feature-list">
+        <li>
+          <span class="feature-list-icon">🏗️</span>
+          <div class="feature-list-text">
+            <h4>Pre-Construction Access</h4>
+            <p>Get in early on developments before public listing. Pre-construction pricing is often lower, and early buyers can choose preferred lots, floor plans, and orientations.</p>
+          </div>
+        </li>
+        <li>
+          <span class="feature-list-icon">🛡️</span>
+          <div class="feature-list-text">
+            <h4>Builder Warranties Included</h4>
+            <p>New homes come with warranty coverage: typically 1 year on workmanship and materials, 2 years on mechanical systems, and 10 years on structural defects.</p>
+          </div>
+        </li>
+        <li>
+          <span class="feature-list-icon">⚡</span>
+          <div class="feature-list-text">
+            <h4>Energy-Efficient Construction</h4>
+            <p>Built to modern energy codes with improved insulation, high-efficiency HVAC, and Energy Star appliances — translating to real savings on monthly utility bills.</p>
+          </div>
+        </li>
+        <li>
+          <span class="feature-list-icon">🎨</span>
+          <div class="feature-list-text">
+            <h4>Customize Your Finishes</h4>
+            <p>On select builds, buyers can choose flooring, cabinet styles, countertops, and fixtures — a level of personalization you simply can't get with existing homes.</p>
+          </div>
+        </li>
+        <li>
+          <span class="feature-list-icon">💰</span>
+          <div class="feature-list-text">
+            <h4>Builder Incentive Packages</h4>
+            <p>Builders frequently offer closing cost contributions, rate buydowns, and upgrade packages — our team knows how to negotiate these on your behalf.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ESA SECTION -->
+<section id="esa" class="service-detail alt">
+  <div class="section-inner">
+    <div class="detail-layout fade-in">
+      <div class="detail-text">
+        <div class="section-label">Pet-Friendly Living</div>
+        <h2 class="section-title">Emotional Support Animal Letters</h2>
+        <div class="section-body">
+          <p>An Emotional Support Animal (ESA) is a companion animal prescribed by a licensed mental health professional to provide therapeutic support for individuals with qualifying emotional or psychological conditions. Unlike service animals, ESAs do not require specialized task training — their therapeutic value comes from companionship and the comfort of their presence.</p>
+          <p>Under the <strong>Fair Housing Act (FHA)</strong>, tenants with a legitimate ESA letter have the legal right to live with their emotional support animal even in housing with strict no-pets policies. Critically, landlords and property managers cannot charge pet deposits or monthly pet fees for a certified ESA. In Atlanta's rental market, where pet deposits routinely run $300–$500 upfront plus $25–$75 per month in pet rent, a valid ESA letter can save you $600 to $1,400 or more over the course of a single lease.</p>
+          <p>Our partner Pettable connects you with a licensed mental health professional in your state who evaluates your eligibility and — if approved — provides an official ESA letter that meets all federal housing requirements. The entire process is completed online and typically takes 24 to 48 hours.</p>
+        </div>
+        <a href="https://pettable.referral-factory.com/uWjzzum4" target="_blank" rel="noopener" class="detail-cta">Get Your ESA Letter →</a>
+      </div>
+      <ul class="feature-list">
+        <li>
+          <span class="feature-list-icon">⚖️</span>
+          <div class="feature-list-text">
+            <h4>Protected Under Federal Law</h4>
+            <p>The Fair Housing Act requires housing providers to accommodate ESA owners. This applies to the vast majority of rental housing, including units with strict no-pets policies.</p>
+          </div>
+        </li>
+        <li>
+          <span class="feature-list-icon">💵</span>
+          <div class="feature-list-text">
+            <h4>Eliminate Pet Fees</h4>
+            <p>Landlords cannot charge pet deposits or monthly pet rent for a certified ESA. In Atlanta, this can save you $600–$1,400+ per lease year.</p>
+          </div>
+        </li>
+        <li>
+          <span class="feature-list-icon">🖥️</span>
+          <div class="feature-list-text">
+            <h4>100% Online Process</h4>
+            <p>Complete a brief online assessment, connect with a licensed mental health professional in your state, and receive your official letter — all without leaving your home.</p>
+          </div>
+        </li>
+        <li>
+          <span class="feature-list-icon">⏱️</span>
+          <div class="feature-list-text">
+            <h4>Fast Turnaround: 24–48 Hours</h4>
+            <p>Once your assessment is reviewed and approved, your ESA letter is issued quickly so you can present it to your landlord without delay.</p>
+          </div>
+        </li>
+        <li>
+          <span class="feature-list-icon">✅</span>
+          <div class="feature-list-text">
+            <h4>Meets All Federal Requirements</h4>
+            <p>Letters are written on licensed provider letterhead, include state license information, and are valid for housing accommodation requests — not a registry or certificate.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="section-inner">
+    <div class="section-label" style="color: var(--gold);">Questions & Answers</div>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-grid">
+      <div class="faq-item fade-in">
+        <div class="faq-q">Is the apartment locating service really free?</div>
+        <div class="faq-a">Yes — completely. Metro Locators is paid a referral fee by apartment communities when a renter signs a lease at one of our recommended properties. You never receive a bill from us, at any point in the process. Our incentives are perfectly aligned with yours: we only get paid when you find a home you love.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-q">Can an ESA letter save me money on rent in Atlanta?</div>
+        <div class="faq-a">Potentially yes. Under the Fair Housing Act, landlords cannot charge pet deposits or monthly pet rent for a certified ESA. In Atlanta, where pet fees can add $600–$1,400 or more per year to your housing costs, a valid ESA letter from a licensed provider eliminates those charges entirely.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-q">What types of new construction are available in Atlanta?</div>
+        <div class="faq-a">Atlanta's new construction market includes townhomes, single-family homes, and in some areas, new condo developments. Active price points range from around $280,000 for suburban townhomes to $700,000+ for large single-family homes in communities like Alpharetta, Milton, and Forsyth County. The Rainey Property Group can help you identify options across all of these categories.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-q">How long does the ESA letter process take?</div>
+        <div class="faq-a">Through Pettable, the online assessment takes approximately 10 minutes to complete. Once submitted, a licensed mental health professional reviews your assessment and — if you qualify — your official ESA letter is issued within 24 to 48 hours.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-q">Do I need to be pre-approved to look at new construction homes?</div>
+        <div class="faq-a">Not necessarily to begin browsing. However, most builders require a mortgage pre-approval letter before accepting a purchase contract. If you're not yet pre-approved, we can connect you with lending partners who specialize in new construction financing. Starting this process early puts you in the best position when you find the right home.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-q">Can I use Metro Locators if I'm relocating from out of state?</div>
+        <div class="faq-a">Absolutely — and out-of-state relocators are some of the people who benefit most from our service. Navigating an unfamiliar city's rental market from a distance is stressful. We provide local expertise, virtual tour coordination, and hands-on guidance through the application process so you can secure a home before you even arrive.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<div class="bottom-cta">
+  <h2>Ready to Find Your Next Home?</h2>
+  <p>Whether you're renting, buying new construction, or navigating pet policies — Metro Locators has you covered. Start your search today, free of charge.</p>
+  <a href="https://agent.reliverealty.com/MetroLocators">Find My Apartment — Free</a>
 </div>
 
 <!-- FOOTER -->
 <footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="/" class="nav-logo">Metro<span>Locators</span></a>
+      <p>Your free, local apartment locating service across Atlanta and beyond.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <ul>
+        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/#how">How It Works</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Renters</h5>
+      <ul>
+        <li><a href="/#listings">Browse Apartments</a></li>
+        <li><a href="/#cities">Service Areas</a></li>
+        <li><a href="https://agent.reliverealty.com/MetroLocators">Get Started Free</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Services</h5>
+      <ul>
+        <li><a href="/services.html">All Services</a></li>
+        <li><a href="https://theraineypropertygroup.com" target="_blank" rel="noopener">New Construction Homes</a></li>
+        <li><a href="https://pettable.referral-factory.com/uWjzzum4" target="_blank" rel="noopener">ESA Letters</a></li>
+      </ul>
+    </div>
+  </div>
   <div class="footer-bottom">
     <p>&copy; 2025 Metro Locators. All rights reserved.</p>
     <div class="footer-legal">
-      <a href="#">Privacy Policy</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
       <a href="#">Terms of Service</a>
+      <a href="#">Accessibility</a>
     </div>
   </div>
 </footer>
 
 <script>
-  function toggleMenu() {
-    document.getElementById('mobileMenu').classList.toggle('open');
-  }
+  function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
-
 </body>
 </html>
